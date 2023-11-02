@@ -28,11 +28,32 @@ public class InventoryManagerTwo : MonoBehaviour
     public int meleeDamage = 0;
     public int rangedDamage = 0;
 
+    public bool inventoryOpen = false;
+
 
     void Start()
     {
         UpdateSlots();
         UpdateStats();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (inventoryOpen) // Toggles inventory, moving it instead of disabling the panel.
+            {
+                transform.localPosition = new Vector2(0, 1000);
+                inventoryOpen = false;
+                UpdateSlots();
+                descriptionPanel.SetActive(false);
+            }
+            else
+            {
+                transform.localPosition = new Vector2(0, 25);
+                inventoryOpen = true;
+            }
+        }
     }
 
     public void ItemSelect(UnityEngine.UI.Button button)
