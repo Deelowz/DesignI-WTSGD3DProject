@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea54204c68ea2454f9f7eed8fb0d9640, type: 3}
+  m_Name: Crown
+  m_EditorClassIdentifier: 
+  id: 20
+  itemName: Crown
+  itemDescription: The ancient crown of a former Bear-Lord. Despite it's age, it
+    remains shiny.
+  value: 15
+  icon: {fileID: 21300000, guid: 8517686c65fccd344a14b5864485a4d0, type: 3}
+  type: 0

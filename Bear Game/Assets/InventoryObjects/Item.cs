@@ -11,4 +11,6 @@ public class Item : ScriptableObject
     public string itemDescription;
     public int value;
     public Sprite icon;
+
+    public int type;
 }

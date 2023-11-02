@@ -16,5 +16,6 @@ MonoBehaviour:
   itemName: Rock
   itemDescription: You picked it up at the entrance of the dungeon. You're pretty
     sure it's the coolest rock you've seen.
-  value: 0
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  value: 5
+  icon: {fileID: 21300000, guid: 3866e473e35306c4c88dd7d295978780, type: 3}
+  type: 3
