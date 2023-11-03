@@ -59,11 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CombatVersionOne.cs" />
+    <Compile Include="Assets\LootGenerationTest.cs" />
     <Compile Include="Assets\InventoryObjects\InventoryVersionOne.cs" />
     <Compile Include="Assets\Scripts\Menu Manager.cs" />
     <Compile Include="Assets\InventoryObjects\ItemController.cs" />
     <Compile Include="Assets\InventoryObjects\InventoryManagerTwo.cs" />
     <Compile Include="Assets\InventoryObjects\ItemPickup.cs" />
+    <Compile Include="Assets\ChestInventoryManager.cs" />
     <Compile Include="Assets\InventoryObjects\Item.cs" />
   </ItemGroup>
   <ItemGroup>
