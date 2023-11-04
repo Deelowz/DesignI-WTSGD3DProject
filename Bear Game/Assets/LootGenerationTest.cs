@@ -38,6 +38,7 @@ public class LootGenerationTest : MonoBehaviour
             chestInventoryScript.chestInventorySlot[i].GetComponent<ItemController>().Item = chestInventory[i];
         }
 
+        chestInventoryScript.lootGenerationTest = this; // Sends it this specific instance of the script.
         chestInventoryScript.UpdateSlots();
         chestInventoryScript.MoveInventory();
     }

@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ChestInventoryManager : MonoBehaviour
 {
     public GameObject[] chestInventorySlot;
 
     public InventoryManagerTwo inventoryManagerTwo;
+    public LootGenerationTest lootGenerationTest;
 
     public GameObject inventoryPanel;
 
     public bool chestOpen = false;
+
+    public Item emptySlot;
+    public int currentSlotNumber;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +51,19 @@ public class ChestInventoryManager : MonoBehaviour
             chestInventorySlot[i].gameObject.GetComponent<UnityEngine.UI.Button>().interactable = true; // Sets all the buttons to interactable.
         }
     }
+    
 
+    public void GiveSlotNumber(int slot)
+    {
+        currentSlotNumber = slot;
+    }
     public void TakeItem(GameObject item)
     {
         inventoryManagerTwo.PickupItem(item);
+
+        if (item.GetComponent<ItemController>().Item.itemName == "Empty")
+        {
+            lootGenerationTest.chestInventory[currentSlotNumber] = emptySlot;
+        }
     }
 }
