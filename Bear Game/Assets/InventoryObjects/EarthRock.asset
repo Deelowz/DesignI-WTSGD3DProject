@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea54204c68ea2454f9f7eed8fb0d9640, type: 3}
+  m_Name: EarthRock
+  m_EditorClassIdentifier: 
+  id: 4
+  itemName: Earth Rock
+  itemDescription: A rock favored by nature and crowned with grass. To plants, it
+    brings life; for your case, it's just very good at hurting things.
+  value: 6
+  icon: {fileID: 21300000, guid: b08103f2826cfff4e90eb48f5c9437cc, type: 3}
+  type: 3
+  stackable: 0
+  amount: 1

@@ -17,5 +17,5 @@ MonoBehaviour:
   itemDescription: You have no idea how, but the flame itself seems to eternally
     burn. It feels like it has already burned for centuries.
   value: 7
-  icon: {fileID: 21300000, guid: 214ab885bcf82b44486a08b5fcb1ba01, type: 3}
+  icon: {fileID: 21300000, guid: 24a39be2be8b5c54b8ad89b055fec392, type: 3}
   type: 3

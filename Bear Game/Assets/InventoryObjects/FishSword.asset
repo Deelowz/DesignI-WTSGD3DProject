@@ -16,5 +16,5 @@ MonoBehaviour:
   itemName: Fish Sword
   itemDescription: A sabre fashioned in the likeness of a fish. Comedic.
   value: 10
-  icon: {fileID: 21300000, guid: 055e52307cbbc9a40b9dc84fe283e83c, type: 3}
+  icon: {fileID: 21300000, guid: 5524f9914be6f164eb1b69e07d1c36ce, type: 3}
   type: 2

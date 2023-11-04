@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea54204c68ea2454f9f7eed8fb0d9640, type: 3}
   m_Name: IronChestplate
   m_EditorClassIdentifier: 
-  id: 25
+  id: 17
   itemName: Iron Chestplate
   itemDescription: Made for a bear slightly smaller than you. Still, it will provide
     some protection.
   value: 5
-  icon: {fileID: 21300000, guid: 833446ae115080b46b51c250a9e0a686, type: 3}
+  icon: {fileID: 21300000, guid: b1cf5872f42426545a481a1e247d2e64, type: 3}
   type: 1

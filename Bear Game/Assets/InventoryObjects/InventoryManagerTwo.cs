@@ -54,6 +54,13 @@ public class InventoryManagerTwo : MonoBehaviour
                 inventoryOpen = true;
             }
         }
+        else if (Input.GetKeyDown(KeyCode.Escape) && inventoryOpen) // Closes inventory with escape as well.
+        {
+            transform.localPosition = new Vector2(0, 1000);
+            inventoryOpen = false;
+            UpdateSlots();
+            descriptionPanel.SetActive(false);
+        }
     }
 
     public void ItemSelect(UnityEngine.UI.Button button)
@@ -113,15 +120,43 @@ public class InventoryManagerTwo : MonoBehaviour
     {
         for (int i = 0; i < inventorySlot.Length; i++)
         {
-            if (!inventorySlotFilled[i]) // Checks for an empty slot.
+            if (item.GetComponent<ItemController>().Item.stackable == true)
             {
-                inventorySlotFilled[i] = true; // If one is found, sets the slot to filled.
-                inventorySlot[i].GetComponent<ItemController>().Item = item.GetComponent<ItemController>().Item; // Makes the inventory slot hold the item.
-                item.GetComponent<ItemController>().Item = emptyItem; // Makes the old slot empty.
-                item.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = item.GetComponent<ItemController>().Item.icon; // Sets the old slot icon to empty.
-                descriptionPanel.SetActive(false);
-                UpdateSlots();
-                return;
+                // Checks if the item already exists in the player's inventory and stacks it.
+                if (inventorySlot[i].GetComponent<ItemController>().Item.itemName == (item.GetComponent<ItemController>().Item.itemName))
+                {
+                    inventorySlot[i].GetComponent<ItemController>().Item.amount += 1;
+                    item.GetComponent<ItemController>().Item = emptyItem;
+                    item.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = item.GetComponent<ItemController>().Item.icon;
+                    descriptionPanel.SetActive(false);
+                    UpdateSlots();
+                    return;
+                }
+
+                // If it does not exist, puts it in the inventory like normal.
+                if (!inventorySlotFilled[i]) // Checks for an empty slot.
+                {
+                    inventorySlotFilled[i] = true; // If one is found, sets the slot to filled.
+                    inventorySlot[i].GetComponent<ItemController>().Item = item.GetComponent<ItemController>().Item; // Makes the inventory slot hold the item.
+                    item.GetComponent<ItemController>().Item = emptyItem; // Makes the old slot empty.
+                    item.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = item.GetComponent<ItemController>().Item.icon; // Sets the old slot icon to empty.
+                    descriptionPanel.SetActive(false);
+                    UpdateSlots();
+                    return;
+                }
+            }
+            else // Puts it in the inventory like normal if the item is not stackable.
+            {
+                if (!inventorySlotFilled[i]) // Checks for an empty slot.
+                {
+                    inventorySlotFilled[i] = true; // If one is found, sets the slot to filled.
+                    inventorySlot[i].GetComponent<ItemController>().Item = item.GetComponent<ItemController>().Item; // Makes the inventory slot hold the item.
+                    item.GetComponent<ItemController>().Item = emptyItem; // Makes the old slot empty.
+                    item.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = item.GetComponent<ItemController>().Item.icon; // Sets the old slot icon to empty.
+                    descriptionPanel.SetActive(false);
+                    UpdateSlots();
+                    return;
+                }
             }
         }
     }

@@ -31,8 +31,17 @@ public class ChestInventoryManager : MonoBehaviour
         {
             if (chestOpen) // Toggles inventory, moving it instead of disabling the panel.
             {
-                transform.localPosition = new Vector2(0, 1000);
-                inventoryPanel.transform.localPosition = new Vector2(298.85f, 74);
+                transform.localPosition = new Vector2(0, 1000); // Moves chest panel away.
+                inventoryPanel.transform.localPosition = new Vector2(298.85f, 74); // Moves inventory panel back to main inventory panel, which is moved into view.
+                chestOpen = false; // Moves inventory panel away.
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (chestOpen)
+            {
+                transform.localPosition = new Vector2(0, 1000); // Moves chest panel away.
+                inventoryPanel.transform.localPosition = new Vector2(298.85f, 74); // Moves inventory panel back to main inventory panel.
                 chestOpen = false;
             }
         }

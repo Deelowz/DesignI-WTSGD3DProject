@@ -17,5 +17,5 @@ MonoBehaviour:
   itemDescription: The ancient crown of a former Bear-Lord. Despite it's age, it
     remains shiny.
   value: 15
-  icon: {fileID: 21300000, guid: 8517686c65fccd344a14b5864485a4d0, type: 3}
+  icon: {fileID: 21300000, guid: bc8204dd65d81c14cb93da2642374fc0, type: 3}
   type: 0

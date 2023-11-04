@@ -13,4 +13,9 @@ public class Item : ScriptableObject
     public Sprite icon;
 
     public int type;
+
+    //---StackableTest-----
+
+    public bool stackable = false;
+    public int amount = 1;
 }

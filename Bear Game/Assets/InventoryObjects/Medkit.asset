@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea54204c68ea2454f9f7eed8fb0d9640, type: 3}
   m_Name: Medkit
   m_EditorClassIdentifier: 
-  id: 30
+  id: 24
   itemName: Medkit
   itemDescription: Contains some basic medical supplies. Made by Grizzcorp.
   value: 25
-  icon: {fileID: 21300000, guid: 74240da2c803b9847aec6a432f58f5f9, type: 3}
+  icon: {fileID: 21300000, guid: e2bb9cda7c44a8b43bef9e58cba0b234, type: 3}
   type: 4
+  stackable: 0
+  amount: 1

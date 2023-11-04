@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class LootGenerationTest : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class LootGenerationTest : MonoBehaviour
     public int chestSlots = 15;
 
     public ChestInventoryManager chestInventoryScript;
+    public InventoryManagerTwo inventoryManagerTwo;
 
 
     // Start is called before the first frame update
@@ -28,10 +30,20 @@ public class LootGenerationTest : MonoBehaviour
         
     }
 
+    private void OnMouseDown()
+    {
+        if (!EventSystem.current.IsPointerOverGameObject()) // Checks to make sure the player doesn't click through UI 
+        {
+            OpenChest();
+        }
+    }
+
     public void OpenChest()
     {
         chestInventoryScript.transform.localPosition = new Vector2(-440, 0); // Moves chest inventory into view.
         chestInventoryScript.chestOpen = true;
+        inventoryManagerTwo.transform.localPosition = new Vector2(0, 1000); // Moves inventory out of view.
+        inventoryManagerTwo.inventoryOpen = false; // Makes sure the inventory knows it is closed.
 
         for (int i = 0; i < chestInventoryScript.chestInventorySlot.Length; i++) // Puts items into chest inventory panel.
         {
