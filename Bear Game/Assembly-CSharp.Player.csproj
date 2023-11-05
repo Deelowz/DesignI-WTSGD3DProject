@@ -63,6 +63,7 @@
     <Compile Include="Assets\InventoryObjects\InventoryVersionOne.cs" />
     <Compile Include="Assets\Scripts\Menu Manager.cs" />
     <Compile Include="Assets\InventoryObjects\ItemController.cs" />
+    <Compile Include="Assets\RockReset.cs" />
     <Compile Include="Assets\InventoryObjects\InventoryManagerTwo.cs" />
     <Compile Include="Assets\InventoryObjects\ItemPickup.cs" />
     <Compile Include="Assets\ChestInventoryManager.cs" />

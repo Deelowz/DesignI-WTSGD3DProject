@@ -132,6 +132,15 @@ public class InventoryManagerTwo : MonoBehaviour
                     UpdateSlots();
                     return;
                 }
+                else if (item.GetComponent<ItemController>().Item.id == equippedSlot[3].GetComponent<ItemController>().Item.id && item != equippedSlot[3]) // Checks if the player has the type of rock equipped.
+                {
+                    equippedSlot[3].GetComponent<ItemController>().Item.amount += 1;
+                    item.GetComponent<ItemController>().Item = emptyItem;
+                    item.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = item.GetComponent<ItemController>().Item.icon;
+                    descriptionPanel.SetActive(false);
+                    UpdateSlots();
+                    return;
+                }
 
                 // If it does not exist, puts it in the inventory like normal.
                 if (!inventorySlotFilled[i]) // Checks for an empty slot.
@@ -226,11 +235,21 @@ public class InventoryManagerTwo : MonoBehaviour
         for (int i = 0; i < inventorySlot.Length; i++) // Goes through and unselects any selected buttons.
         {
             inventorySlot[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = inventorySlot[i].GetComponent<ItemController>().Item.icon; // Updates all the icons.
+            
             inventorySlot[i].gameObject.GetComponent<UnityEngine.UI.Button>().interactable = true; // Sets all the buttons to interactable.
 
             if (inventorySlot[i].GetComponent<ItemController>().Item.itemName == "Empty") // Checks for any empty slots.
             {
                 inventorySlotFilled[i] = false; // Updates those slots to be empty in terms of the boolean value.
+
+                inventorySlot[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
+            }
+            else
+            {
+                if (inventorySlot[i].GetComponent<ItemController>().Item.stackable)
+                {
+                    inventorySlot[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = inventorySlot[i].GetComponent<ItemController>().Item.amount.ToString(); // Updates the text.
+                }
             }
         }
 
@@ -242,6 +261,15 @@ public class InventoryManagerTwo : MonoBehaviour
             if (equippedSlot[i].GetComponent<ItemController>().Item.itemName == "Empty") // Checks for any empty slots.
             {
                 equippedSlotFilled[i] = false; // Updates those slots to be empty in terms of the boolean value.
+
+                equippedSlot[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
+            }
+            else
+            {
+                if (equippedSlot[i].GetComponent<ItemController>().Item.stackable)
+                {
+                    equippedSlot[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = equippedSlot[i].GetComponent<ItemController>().Item.amount.ToString(); // Updates the text.
+                }
             }
         }
     }

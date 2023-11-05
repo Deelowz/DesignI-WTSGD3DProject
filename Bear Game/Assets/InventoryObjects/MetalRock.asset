@@ -18,3 +18,5 @@ MonoBehaviour:
   value: 10
   icon: {fileID: 21300000, guid: 39b3329f23c9ab645bb11222659228f0, type: 3}
   type: 3
+  stackable: 1
+  amount: 1

@@ -18,4 +18,5 @@ public class Item : ScriptableObject
 
     public bool stackable = false;
     public int amount = 1;
+
 }
