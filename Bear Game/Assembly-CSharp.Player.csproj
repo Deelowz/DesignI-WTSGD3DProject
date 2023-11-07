@@ -58,24 +58,24 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.5f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LootGenerationTest.cs" />
-    <Compile Include="Assets\InventoryObjects\InventoryVersionOne.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemController.cs" />
     <Compile Include="Assets\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item.cs" />
+    <Compile Include="Assets\Scripts\Inventory\RockReset.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
-    <Compile Include="Assets\InventoryObjects\ItemController.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
-    <Compile Include="Assets\RockReset.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Scripts\Player Controller.cs" />
-    <Compile Include="Assets\InventoryObjects\InventoryManagerTwo.cs" />
-    <Compile Include="Assets\InventoryObjects\ItemPickup.cs" />
-    <Compile Include="Assets\ChestInventoryManager.cs" />
-    <Compile Include="Assets\Scripts\CombatVersionOne.cs" />
+    <Compile Include="Assets\Scripts\Inventory\LootGenerationTest.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryManagerTwo.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemPickup.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Scripts\Menu Manager.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ChestInventoryManager.cs" />
+    <Compile Include="Assets\Scripts\Combat\CombatVersionOne.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\ThrownRock.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets\InventoryObjects\Item.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
