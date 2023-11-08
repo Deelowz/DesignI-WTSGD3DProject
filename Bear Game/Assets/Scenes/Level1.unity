@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1215,7 +1215,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5471448804767848989, guid: 9767b640e6cc87c42aed06a8e9baff72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 448718691}
+      addedObject: {fileID: 915391123}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9767b640e6cc87c42aed06a8e9baff72, type: 3}
 --- !u!1001 &287614261
@@ -1748,99 +1748,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
   m_PrefabInstance: {fileID: 591186061}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &448718690
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 448718691}
-  - component: {fileID: 448718693}
-  - component: {fileID: 448718692}
-  m_Layer: 0
-  m_Name: CameraForRockThrow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &448718691
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448718690}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1990001, z: -0.02199998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 915391123}
-  m_Father: {fileID: 849168422}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &448718692
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448718690}
-  m_Enabled: 1
---- !u!20 &448718693
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448718690}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1001 &461033851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4822,12 +4729,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915391122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.181, y: 1.1990001, z: 0.334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 448718691}
+  m_Father: {fileID: 849168422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &917302200
 PrefabInstance:
@@ -5546,6 +5453,11 @@ MonoBehaviour:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1076048833178762207, guid: 55b41b2e35a71d04f98aa4a9e3610cff, type: 3}
   m_PrefabInstance: {fileID: 1726298832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1085850222 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+  m_PrefabInstance: {fileID: 1996110307}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093021833
 GameObject:
@@ -6900,7 +6812,7 @@ GameObject:
   - component: {fileID: 1354704438}
   - component: {fileID: 1354704437}
   - component: {fileID: 1354704436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Baseplate Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7691,14 +7603,14 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  birdEyeCamera: {fileID: 1753356906}
+  birdEyeCamera: {fileID: 1085850222}
   cam: {fileID: 1753356908}
   attackPoint: {fileID: 915391123}
   objectToThrow: {fileID: 8067001606562842567, guid: 41301205379aca64a8ca05a680116a17, type: 3}
   totalThrows: 100
   throwCooldown: 0.1
   throwKey: 324
-  throwForce: 70
+  throwForce: 15
   throwUpwardForce: 0
   readyToThrow: 0
 --- !u!1001 &1595554169
@@ -8672,7 +8584,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -8697,13 +8609,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753356905}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.000000014901163, z: -0.000000014901163, w: 0.7071068}
-  m_LocalPosition: {x: 69.95, y: 60.15, z: 109.83}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 66.19, y: 60.15, z: 105.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!1 &1773742124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8842826118279244682, guid: 55b41b2e35a71d04f98aa4a9e3610cff, type: 3}
@@ -10387,7 +10299,7 @@ GameObject:
   - component: {fileID: 3512061704285123547}
   - component: {fileID: 3593630957230243214}
   - component: {fileID: 6474017028138547330}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -95,29 +95,34 @@ public class CombatVersionOne : MonoBehaviour
     {
         readyToThrow = false;
 
-        // instantiates the throw object
+        //// instantiates the throw object
+        //GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
+
+        //// get the object's rigidbody
+        //Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+
+
+        //Vector3 forceDirection = cam.transform.forward;
+
+        //RaycastHit hit;
+
+        //if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+        //{
+        //    forceDirection = (hit.point - attackPoint.position).normalized;
+        //}
+
+
+
+        //// adds force to it
+        //Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
+
+        //projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
         GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
+        Vector3 forceDirection = attackPoint.forward * throwForce;
 
-        // get the object's rigidbody
-        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
-
-
-
-        Vector3 forceDirection = cam.transform.forward;
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
-        {
-            forceDirection = (hit.point - attackPoint.position).normalized;
-        }
-
-
-
-        // adds force to it
-        Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-
-        projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(forceDirection, ForceMode.Impulse);
 
         totalThrows--;
 
