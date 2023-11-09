@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class CombatVersionOne : MonoBehaviour
@@ -47,14 +48,13 @@ public class CombatVersionOne : MonoBehaviour
         readyToThrow = true;
     }
 
-    
+
 
     // Update is called once per frame
     void Update()
     {
 
         Aim();
-
         //if (Input.GetMouseButtonDown(0)) // Player left clicks, swinging the sword.
         //{
         //    if (!isSwinging && !isRecoiling) // Makes sure the player isn't in the middle of attacking or getting hit.
@@ -84,50 +84,44 @@ public class CombatVersionOne : MonoBehaviour
         //}
         if (Input.GetMouseButtonDown(1) && readyToThrow && totalThrows > 0) // Player right clicks, throwing a rock. It checks if they can and have the rocks.
         {
-            //if (rockSlot.Item.id != 0) // Makes sure a rock is equipped.
-            //{
-                ThrowRock();
-            //}
+            ThrowRock();
         }
     }
 
     public void ThrowRock()
     {
-        readyToThrow = false;
+        var (success, position) = GetMousePosition();
 
-        //// instantiates the throw object
-        //GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
+        if (success)
+        {
+            readyToThrow = false;
 
-        //// get the object's rigidbody
-        //Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+            GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
+            Vector3 forceDirection = calculateRockVelocity(transform.position, position);
 
+            projectile.GetComponent<Rigidbody>().AddForce(forceDirection, ForceMode.Impulse);
 
+            totalThrows--;
 
-        //Vector3 forceDirection = cam.transform.forward;
+            Invoke(nameof(ResetThrow), throwCooldown);
 
-        //RaycastHit hit;
+            Debug.Log("Rock throw called");
+        }
+    }
 
-        //if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
-        //{
-        //    forceDirection = (hit.point - attackPoint.position).normalized;
-        //}
+    Vector3 calculateRockVelocity(Vector3 source, Vector3 target)
+    {
+        Vector3 direction = target - source;
+        float h = direction.y;
+        direction.y = 0;
+        float distance = direction.magnitude;
+        float a = 30 * Mathf.Deg2Rad;
+        direction.y = distance * Mathf.Tan(a);
+        distance += h / Mathf.Tan(a);
 
+        float velocity = Mathf.Sqrt(distance * Physics.gravity.magnitude / Mathf.Sin(2 * a));
 
-
-        //// adds force to it
-        //Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-
-        //projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
-
-        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
-        Vector3 forceDirection = attackPoint.forward * throwForce;
-
-        projectile.GetComponent<Rigidbody>().AddForce(forceDirection, ForceMode.Impulse);
-
-        totalThrows--;
-
-        // cooldown
-        Invoke(nameof(ResetThrow), throwCooldown); 
+        return velocity * direction.normalized;
     }
 
     private (bool success, Vector3 position) GetMousePosition()

@@ -67,6 +67,7 @@
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Scripts\Player Controller.cs" />
     <Compile Include="Assets\Scripts\Inventory\LootGenerationTest.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManagerTwo.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemPickup.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
