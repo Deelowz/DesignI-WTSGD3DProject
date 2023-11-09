@@ -18,9 +18,9 @@ namespace StarterAssets
             starterAssetsInputs.LookInput(virtualLookDirection);
         }
 
-        public void VirtualJumpInput(bool virtualJumpState)
+        public void VirtualDashInput(bool virtualDashState)
         {
-            starterAssetsInputs.JumpInput(virtualJumpState);
+            starterAssetsInputs.DashInput(virtualDashState);
         }
 
         public void VirtualSprintInput(bool virtualSprintState)
