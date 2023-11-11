@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && dashCooldownTime == 0)
         {
             dashing = true;
+            
             dashDirection = direction;
             dashCooldownTime = dashCooldown;
 
@@ -72,5 +73,19 @@ public class PlayerMovement : MonoBehaviour
     public void DashDone()
     {
         dashing = false;
+    }
+    public float GetHorizontalInput()
+    {
+        return Input.GetAxisRaw("Horizontal");
+    }
+
+    public float GetVerticalInput()
+    {
+        return Input.GetAxisRaw("Vertical");
+    }
+
+    public bool IsDashing()
+    {
+        return dashing;
     }
 }

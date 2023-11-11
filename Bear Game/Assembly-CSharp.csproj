@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Inventory\InventoryManagerTwo.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemPickup.cs" />
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
+     <Compile Include="Assets\Scripts\AnimationStateController.cs" />
      <Compile Include="Assets\Scripts\Menu Manager.cs" />
      <Compile Include="Assets\Scripts\Inventory\ChestInventoryManager.cs" />
      <Compile Include="Assets\Scripts\Combat\CombatVersionOne.cs" />
@@ -73,7 +74,6 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\StarterAssets\license.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
