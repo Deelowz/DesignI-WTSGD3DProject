@@ -88,4 +88,12 @@ public class PlayerMovement : MonoBehaviour
     {
         return dashing;
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "room")
+        {
+            other.GetComponent<Room>().TransitionRoom();
+        }
+    }
 }
