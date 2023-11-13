@@ -15,7 +15,7 @@ public class CombatVersionOne : MonoBehaviour
     public ItemController swordSlot;
     public ItemController rockSlot;
 
-    public GameObject rockPrefab;
+    public InventoryManagerTwo inventoryManagerTwo;
 
     //------------------Rock Throw Things---------------------------
 
@@ -26,7 +26,7 @@ public class CombatVersionOne : MonoBehaviour
     [Header("References")]
     public Transform cam;
     public Transform attackPoint;
-    public GameObject objectToThrow;
+    public GameObject[] objectToThrow;
 
     [Header("Settings")]
     public int totalThrows;
@@ -82,7 +82,7 @@ public class CombatVersionOne : MonoBehaviour
         //        sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
         //    }
         //}
-        if (Input.GetMouseButtonDown(1) && readyToThrow && totalThrows > 0) // Player right clicks, throwing a rock. It checks if they can and have the rocks.
+        if (Input.GetMouseButtonDown(1) && readyToThrow && inventoryManagerTwo.equippedSlot[3].GetComponent<ItemController>().Item.amount > 0 && inventoryManagerTwo.equippedSlot[3].GetComponent<ItemController>().Item.type == 3) // Player right clicks, throwing a rock. It checks if they can and have the rocks.
         {
             ThrowRock();
         }
@@ -94,14 +94,33 @@ public class CombatVersionOne : MonoBehaviour
 
         if (success)
         {
+
+
+
+
+            //-----------------------Instantiates and throws the rock--------------------------------------------------------------
             readyToThrow = false;
 
-            GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
+            GameObject projectile = Instantiate(objectToThrow[rockSlot.Item.id], attackPoint.position, attackPoint.rotation);
             Vector3 forceDirection = calculateRockVelocity(transform.position, position);
 
             projectile.GetComponent<Rigidbody>().AddForce(forceDirection, ForceMode.Impulse);
 
-            totalThrows--;
+            //-----------------------Updates inventory information related to rock-------------------------------------------------
+
+
+            rockSlot.Item.amount--; // lowers equipped rock amount
+
+            if (rockSlot.Item.amount == 0) // delete rock from inventory
+            {
+                rockSlot.Item.amount = 1;
+                inventoryManagerTwo.selectedButton = inventoryManagerTwo.equippedSlot[3];
+                inventoryManagerTwo.DropItem();
+            }
+
+            inventoryManagerTwo.UpdateSlots();
+
+            //-------------------------------------------Cooldown------------------------------------------------------------------
 
             Invoke(nameof(ResetThrow), throwCooldown);
 

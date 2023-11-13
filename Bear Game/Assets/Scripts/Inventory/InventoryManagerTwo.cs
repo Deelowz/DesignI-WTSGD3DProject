@@ -20,6 +20,8 @@ public class InventoryManagerTwo : MonoBehaviour
     public GameObject descriptionPanel;
     public GameObject selectedButton;
 
+    public CombatVersionOne combatVersionOne;
+
     public Item emptyItem;
 
     public int health = 100;
@@ -194,6 +196,10 @@ public class InventoryManagerTwo : MonoBehaviour
                 equippedSlot[type].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = selectedButton.GetComponent<ItemController>().Item.icon;
                 selectedButton.GetComponent<ItemController>().Item = emptyItem;
                 descriptionPanel.SetActive(false);
+
+                //New rock throw stuff.
+                //combatVersionOne.totalThrows = equippedSlot[type].GetComponent<ItemController>().Item.amount; // When you equip a rock, your total throws become the amount of that rock you have.
+
 
                 UpdateStats(); // Updates the stats.
             }
