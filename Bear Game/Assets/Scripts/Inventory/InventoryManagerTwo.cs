@@ -17,10 +17,12 @@ public class InventoryManagerTwo : MonoBehaviour
     public TMP_Text itemDescription;
 
     public TMP_Text interactButton;
+    public GameObject dropButton;
     public GameObject descriptionPanel;
     public GameObject selectedButton;
 
     public CombatVersionOne combatVersionOne;
+    public ChestInventoryManager chestInventoryManager;
 
     public Item emptyItem;
 
@@ -43,17 +45,24 @@ public class InventoryManagerTwo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (inventoryOpen) // Toggles inventory, moving it instead of disabling the panel.
+            if (chestInventoryManager.chestOpen == true)
             {
-                transform.localPosition = new Vector2(0, 1000);
-                inventoryOpen = false;
-                UpdateSlots();
-                descriptionPanel.SetActive(false);
+                chestInventoryManager.CloseInventory();
             }
             else
             {
-                transform.localPosition = new Vector2(0, 25);
-                inventoryOpen = true;
+                if (inventoryOpen) // Toggles inventory, moving it instead of disabling the panel.
+                {
+                    transform.localPosition = new Vector2(0, 1000);
+                    inventoryOpen = false;
+                    UpdateSlots();
+                    descriptionPanel.SetActive(false);
+                }
+                else
+                {
+                    transform.localPosition = new Vector2(0, 25);
+                    inventoryOpen = true;
+                }
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && inventoryOpen) // Closes inventory with escape as well.
@@ -82,12 +91,18 @@ public class InventoryManagerTwo : MonoBehaviour
         {
             descriptionPanel.SetActive(false);
         }
-        else if (itemInfo.type == 4)
+        else if (itemInfo.type == 4) // Healing items
         {
             descriptionPanel.SetActive(true);
             interactButton.text = "Use";
         }
-        else
+        else if (itemInfo.type == 6) // Gemstones for door. Disables the ability to interact or drop them because they're necessary.
+        {
+            descriptionPanel.SetActive(true);
+            dropButton.SetActive(false);
+            interactButton.transform.parent.gameObject.SetActive(false);
+        }
+        else // equippable items like weapons, armor, etc
         {
             descriptionPanel.SetActive(true);
             interactButton.text = "Equip";
@@ -259,7 +274,7 @@ public class InventoryManagerTwo : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < equippedSlotFilled.Length; i++) // Goes through and unselects any selected buttons.
+        for (int i = 0; i < equippedSlotFilled.Length; i++) // Goes through and unselects any selected equipped buttons.
         {
             equippedSlot[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = equippedSlot[i].GetComponent<ItemController>().Item.icon; // Updates all the icons.
             equippedSlot[i].gameObject.GetComponent<UnityEngine.UI.Button>().interactable = true; // Sets all the buttons to interactable.
@@ -278,5 +293,10 @@ public class InventoryManagerTwo : MonoBehaviour
                 }
             }
         }
+
+        // Important, sets the buttons back to active.
+        dropButton.SetActive(true);
+        interactButton.transform.parent.gameObject.SetActive(true);
+
     }
 }
