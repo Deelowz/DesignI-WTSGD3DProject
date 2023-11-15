@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,6 +435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e68d69d67a47d4189ef2c78eda0c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 15
+  healthSlider: {fileID: 1300673356}
+  healthText: {fileID: 1862613172}
   isSwinging: 0
   isRecoiling: 0
   sword: []
@@ -455,7 +458,6 @@ MonoBehaviour:
   - {fileID: 8067001606562842567, guid: f8b97f63e5ca3ae409d324c930f25d6f, type: 3}
   - {fileID: 8067001606562842567, guid: e54448f679b463a4e88df75fad556ab5, type: 3}
   - {fileID: 8067001606562842567, guid: 8aac0a599bebefe4e96400f83da50572, type: 3}
-  totalThrows: 1000
   throwCooldown: 0.1
   throwKey: 324
   throwForce: 15
@@ -7511,7 +7513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc0df4a439053d4fa1761aa8cf7f474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 15
   hitVFX: {fileID: 0}
   ragdoll: {fileID: 0}
   attackCD: 3
@@ -7956,9 +7958,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 100
+  m_MaxValue: 15
+  m_WholeNumbers: 1
+  m_Value: 15
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11628,7 +11630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100/100
+  m_text: 15/15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12333,7 +12335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.943512, y: 0}
+  m_AnchoredPosition: {x: -4.9434814, y: 0}
   m_SizeDelta: {x: 0.113, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980323851

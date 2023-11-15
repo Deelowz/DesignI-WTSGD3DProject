@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatVersionOne : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //-----------------Health Stuff-------------------
+    public int health = 15;
+    public UnityEngine.UI.Slider healthSlider;
+    public TMP_Text healthText;
+
+    //-----------------Sword and Combat Stuff---------------------
     public bool isSwinging = false;
     public bool isRecoiling = false;
 
@@ -18,7 +25,6 @@ public class CombatVersionOne : MonoBehaviour
     public InventoryManagerTwo inventoryManagerTwo;
 
     //------------------Rock Throw Things---------------------------
-
     [SerializeField] private LayerMask groundMask;
 
     public Camera birdEyeCamera;
@@ -29,7 +35,7 @@ public class CombatVersionOne : MonoBehaviour
     public GameObject[] objectToThrow;
 
     [Header("Settings")]
-    public int totalThrows;
+    //public int totalThrows;
     public float throwCooldown;
 
     [Header("Throwing")]
@@ -86,6 +92,13 @@ public class CombatVersionOne : MonoBehaviour
         {
             ThrowRock();
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthSlider.value = health;
+        healthText.text = health + "/15";
     }
 
     public void ThrowRock()

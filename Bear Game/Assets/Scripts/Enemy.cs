@@ -5,7 +5,7 @@ using UnityEngine.AI;
  
 public class Enemy: MonoBehaviour
 {
-    [SerializeField] float health = 3;
+    [SerializeField] float health = 15;
     [SerializeField] GameObject hitVFX;
     [SerializeField] GameObject ragdoll;
  
@@ -49,6 +49,11 @@ public class Enemy: MonoBehaviour
             {
                 animator.SetTrigger("attack");
                 timePassed = 0;
+
+                if (Vector3.Distance(player.transform.position, transform.position) <= 2) // Checks if the player is super close. Change this to occur in the middle of the attack swing as an event.
+                {
+                    player.GetComponent<CombatVersionOne>().TakeDamage(3); // hurts player, 3 as placeholder damage.
+                }
             }
         }
         timePassed += Time.deltaTime;
@@ -70,6 +75,21 @@ public class Enemy: MonoBehaviour
         {
             print(true);
             player = collision.gameObject;
+        }
+
+        if (collision.gameObject.CompareTag("Rock")) // checks if a rock projectile has hit
+        {
+            TakeDamage(collision.transform.GetComponent<ThrownRock>().damage); // calls the TakeDamage method and sends the rock script's damage
+            Destroy(collision.gameObject);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        health -= damage; // damages
+        if (health <= 0) // if the health is at or below 0, death
+        {
+            Die();
         }
     }
  
