@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ThrownRock : MonoBehaviour
 {
-    public float damage = 0;
+    public int damage = 0;
     public char effect = 'n';
 }

@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
  
 public class Enemy: MonoBehaviour
 {
-    [SerializeField] float health = 15;
+    // Healthbar things
+    public UnityEngine.UI.Slider healthSlider;
+    public TMP_Text healthText;
+
+
+    [SerializeField] int health = 15;
     [SerializeField] GameObject hitVFX;
     [SerializeField] GameObject ragdoll;
  
@@ -22,6 +28,11 @@ public class Enemy: MonoBehaviour
  
     void Start()
     {
+        // Sets healthbar to this script's health
+        healthSlider.maxValue = health;
+        healthSlider.value = health;
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -84,14 +95,6 @@ public class Enemy: MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
-    {
-        health -= damage; // damages
-        if (health <= 0) // if the health is at or below 0, death
-        {
-            Die();
-        }
-    }
  
     void Die()
     {
@@ -100,12 +103,13 @@ public class Enemy: MonoBehaviour
         Destroy(this.gameObject);
     }
  
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
+        healthSlider.value -= damageAmount;
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
         animator.SetTrigger("damage");
  
-        if (health <= 0)
+        if (healthSlider.value <= healthSlider.minValue)
         {
             Die();
         }
