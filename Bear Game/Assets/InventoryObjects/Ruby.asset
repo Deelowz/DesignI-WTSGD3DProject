@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea54204c68ea2454f9f7eed8fb0d9640, type: 3}
-  m_Name: Emerald
+  m_Name: Ruby
   m_EditorClassIdentifier: 
-  id: 100
-  itemName: Emerald
-  itemDescription: A gemstone with scratches around it's edges.
+  id: 101
+  itemName: Ruby
+  itemDescription: A valuable jewel that shines in the light. The sides are rough,
+    however.
   value: 0
-  icon: {fileID: 21300000, guid: bfc85ead4e812974f8f38afbecaf44e8, type: 3}
+  icon: {fileID: 21300000, guid: 04dd4221d346cac4095f78396617bde8, type: 3}
   type: 6
   stackable: 0
   amount: 1

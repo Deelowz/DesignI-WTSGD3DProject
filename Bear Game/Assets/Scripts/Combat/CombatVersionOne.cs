@@ -94,6 +94,14 @@ public class CombatVersionOne : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Spike"))
+        {
+            TakeDamage(5);
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -107,10 +115,6 @@ public class CombatVersionOne : MonoBehaviour
 
         if (success)
         {
-
-
-
-
             //-----------------------Instantiates and throws the rock--------------------------------------------------------------
             readyToThrow = false;
 

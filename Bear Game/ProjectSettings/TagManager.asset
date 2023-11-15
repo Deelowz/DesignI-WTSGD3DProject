@@ -8,6 +8,7 @@ TagManager:
   - room
   - Enemy
   - Rock
+  - Spike
   layers:
   - Default
   - TransparentFX
