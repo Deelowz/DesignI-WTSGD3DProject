@@ -27,7 +27,7 @@ public class HealthSystem : MonoBehaviour
  
     void Die()
     {
-        Instantiate(ragdoll, transform.position, transform.rotation);
+        animator.SetTrigger("death");
         Destroy(this.gameObject);
     }
     public void HitVFX(Vector3 hitPosition)
