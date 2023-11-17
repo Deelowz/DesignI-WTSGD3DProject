@@ -22,6 +22,6 @@ public class SpikeTrap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        transform.GetComponent<Animator>().Play("SpikeTrap");
+        transform.GetComponent<Animator>().Play("Spikes");
     }
 }

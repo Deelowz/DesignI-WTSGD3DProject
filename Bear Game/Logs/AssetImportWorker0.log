@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/release' branch; Version is '2022.3.5f1 (9674261d40ee) revision 9860134'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 32494 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32692 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity 2022.3.5f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2022.3.5f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/deelo/Desktop/DesignI-WTSGD3DProject/Bear Game
+C:/Users/caleb/OneDrive/Documents/GitHub/DesignI-WTSGD3DProject/Bear Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57533
-Successfully changed project path to: C:/Users/deelo/Desktop/DesignI-WTSGD3DProject/Bear Game
-C:/Users/deelo/Desktop/DesignI-WTSGD3DProject/Bear Game
+51420
+Successfully changed project path to: C:/Users/caleb/OneDrive/Documents/GitHub/DesignI-WTSGD3DProject/Bear Game
+C:/Users/caleb/OneDrive/Documents/GitHub/DesignI-WTSGD3DProject/Bear Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,64 +49,64 @@ C:/Users/deelo/Desktop/DesignI-WTSGD3DProject/Bear Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [84] Host "[IP] 192.168.50.134 [Port] 0 [Flags] 2 [Guid] 2213256299 [EditorId] 2213256299 [Version] 1048832 [Id] WindowsEditor(7,ChadsG15) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [20660] Host "[IP] 192.168.0.70 [Port] 0 [Flags] 2 [Guid] 4211174605 [EditorId] 4211174605 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-75DKVIP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [84] Host "[IP] 192.168.50.134 [Port] 0 [Flags] 2 [Guid] 2213256299 [EditorId] 2213256299 [Version] 1048832 [Id] WindowsEditor(7,ChadsG15) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20660] Host "[IP] 192.168.0.70 [Port] 0 [Flags] 2 [Guid] 4211174605 [EditorId] 4211174605 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-75DKVIP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 15.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 17.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.5f1 (9674261d40ee)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.3.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/deelo/Desktop/DesignI-WTSGD3DProject/Bear Game/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/caleb/OneDrive/Documents/GitHub/DesignI-WTSGD3DProject/Bear Game/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3050 Ti Laptop GPU (ID=0x25a0)
-    Vendor:   NVIDIA
-    VRAM:     3977 MB
-    Driver:   31.0.15.4601
+    Renderer: AMD Radeon RX 6600 XT (ID=0x73ff)
+    Vendor:   ATI
+    VRAM:     8147 MB
+    Driver:   31.0.21023.2010
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity 2022.3.5f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity 2022.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity 2022.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity 2022.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011710 seconds.
-- Loaded All Assemblies, in  0.369 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.013266 seconds.
+- Loaded All Assemblies, in  0.310 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.288 seconds
-Domain Reload Profiling: 653ms
-	BeginReloadAssembly (112ms)
+- Finished resetting the current domain, in  0.203 seconds
+Domain Reload Profiling: 510ms
+	BeginReloadAssembly (93ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (144ms)
-		LoadAssemblies (107ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (115ms)
+		LoadAssemblies (90ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (132ms)
-			TypeCache.Refresh (131ms)
-				TypeCache.ScanAssembly (115ms)
+		AnalyzeDomain (105ms)
+			TypeCache.Refresh (104ms)
+				TypeCache.ScanAssembly (93ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (289ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (204ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (230ms)
+		SetupLoadedEditorAssemblies (159ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (162ms)
-			ProcessInitializeOnLoadMethodAttributes (46ms)
+			ProcessInitializeOnLoadAttributes (104ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -114,61 +114,60 @@ Domain Reload Profiling: 653ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\deelo\Desktop\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\deelo\Desktop\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.178 seconds
-Refreshing native plugins compatible for Editor in 10.57 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.844 seconds
+Refreshing native plugins compatible for Editor in 7.94 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.942 seconds
-Domain Reload Profiling: 2111ms
-	BeginReloadAssembly (154ms)
+- Finished resetting the current domain, in  0.641 seconds
+Domain Reload Profiling: 1477ms
+	BeginReloadAssembly (123ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (922ms)
-		LoadAssemblies (435ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (634ms)
+		LoadAssemblies (383ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (554ms)
-			TypeCache.Refresh (503ms)
-				TypeCache.ScanAssembly (484ms)
-			ScanForSourceGeneratedMonoScriptInfo (37ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (943ms)
+		AnalyzeDomain (302ms)
+			TypeCache.Refresh (269ms)
+				TypeCache.ScanAssembly (255ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (641ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (730ms)
+		SetupLoadedEditorAssemblies (500ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (122ms)
-			ProcessInitializeOnLoadAttributes (496ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
-			AfterProcessingInitializeOnLoad (19ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (322ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (13ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 10.54 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 7.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5644 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 91 unused Assets / (0.8 MB). Loaded Objects now: 6113.
-Memory consumption went from 216.0 MB to 215.3 MB.
-Total: 3.776900 ms (FindLiveObjects: 0.412200 ms CreateObjectMapping: 0.230500 ms MarkObjects: 2.761500 ms  DeleteObjects: 0.370900 ms)
+Memory consumption went from 216.6 MB to 215.9 MB.
+Total: 5.164700 ms (FindLiveObjects: 0.487000 ms CreateObjectMapping: 0.467700 ms MarkObjects: 3.807300 ms  DeleteObjects: 0.401800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
@@ -181,353 +180,414 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 41268.332215 seconds.
-  path: Assets/baseRock.fbx
-  artifactKey: Guid(dd30bf11da75230469dc15e7d73372af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/baseRock.fbx using Guid(dd30bf11da75230469dc15e7d73372af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c2fab477215d5dc058647d28457a5fa') in 0.106041 seconds
+  Time since last request: 24152.230802 seconds.
+  path: Assets/Prefabs/Rocks/FireRock.prefab
+  artifactKey: Guid(9c151939a8b3a524e853675e081fb804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Rocks/FireRock.prefab using Guid(9c151939a8b3a524e853675e081fb804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd42991c87506cf45e957f7d47f865e5b') in 0.100900 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 16.730751 seconds.
-  path: Assets/rockLava.fbx
-  artifactKey: Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockLava.fbx using Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56a99f2e49a12fd53310ee31650dca2e') in 0.060840 seconds
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefabs/Rocks/EarthRock.prefab
+  artifactKey: Guid(e54448f679b463a4e88df75fad556ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Rocks/EarthRock.prefab using Guid(e54448f679b463a4e88df75fad556ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a4a6d9a930fa78df05a8a3f360f445') in 0.020120 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 151.476792 seconds.
-  path: Assets/Materials/Textures/rock_standardSurface1_Normal.png
-  artifactKey: Guid(675928fbf4054914ea7571eae9118d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Textures/rock_standardSurface1_Normal.png using Guid(675928fbf4054914ea7571eae9118d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a030a50a1c2df6398c6332fc7f1b11') in 0.030568 seconds
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/Rocks/MetalRock.prefab
+  artifactKey: Guid(8aac0a599bebefe4e96400f83da50572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Rocks/MetalRock.prefab using Guid(8aac0a599bebefe4e96400f83da50572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4f9fc81e401d27977f2b98a70072e6') in 0.019015 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 48197.417188 seconds.
-  path: Assets/baseRock.fbx
-  artifactKey: Guid(dd30bf11da75230469dc15e7d73372af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/baseRock.fbx using Guid(dd30bf11da75230469dc15e7d73372af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7cc386c33b4513c982016ad2012bc7') in 0.050169 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 8.911863 seconds.
-  path: Assets/baseRock.fbx
-  artifactKey: Guid(dd30bf11da75230469dc15e7d73372af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/baseRock.fbx using Guid(dd30bf11da75230469dc15e7d73372af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93e3911e560b0594de67304c3d7fe523') in 0.045525 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 993.542338 seconds.
-  path: Assets/rockWater (4).png
-  artifactKey: Guid(2327707653d125447a3c6f9ec8a3620a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockWater (4).png using Guid(2327707653d125447a3c6f9ec8a3620a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b670084ad0eba4c31f42e12287ee29') in 0.023967 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 4.700166 seconds.
-  path: Assets/rockWater (1).fbx
-  artifactKey: Guid(a42ed21c16df10b42b7bd01ea2c0f7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockWater (1).fbx using Guid(a42ed21c16df10b42b7bd01ea2c0f7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447014c5432709b198536aa3391344a4') in 0.050197 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 11.002075 seconds.
-  path: Assets/rockWater (1).fbx
-  artifactKey: Guid(a42ed21c16df10b42b7bd01ea2c0f7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockWater (1).fbx using Guid(a42ed21c16df10b42b7bd01ea2c0f7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1303a942f9daa2301204a6e476e7f4b') in 0.044031 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 124.889757 seconds.
-  path: Assets/rockWater (2).png
-  artifactKey: Guid(e582c4f02b56092429dd4abdd3c470b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockWater (2).png using Guid(e582c4f02b56092429dd4abdd3c470b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da5ca9cb06a0f04b2a9004fb82445cb') in 0.024683 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 32.321703 seconds.
-  path: Assets/rockWater (1).png
-  artifactKey: Guid(3e5cc6d5dc540c74cabef385f3a44d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockWater (1).png using Guid(3e5cc6d5dc540c74cabef385f3a44d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '723bd0892da31fbb452f2604087bde8e') in 0.028691 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 7.273704 seconds.
-  path: Assets/rockWater (3).png
-  artifactKey: Guid(c365ee81540b9e54d8beeedfe36347b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockWater (3).png using Guid(c365ee81540b9e54d8beeedfe36347b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ca3c57edc5cc4ceaeb99e3a1fbdf59') in 0.026294 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 137.007901 seconds.
-  path: Assets/waterRock_BC.png
-  artifactKey: Guid(3e5cc6d5dc540c74cabef385f3a44d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/waterRock_BC.png using Guid(3e5cc6d5dc540c74cabef385f3a44d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5f4c0fec3d18a5242c1a16f67a32bf') in 0.024643 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 19.674275 seconds.
-  path: Assets/waterRock_EM.png
-  artifactKey: Guid(e582c4f02b56092429dd4abdd3c470b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/waterRock_EM.png using Guid(e582c4f02b56092429dd4abdd3c470b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3901f1c47f8efb6071e346460dc2b728') in 0.022061 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 26.985463 seconds.
-  path: Assets/waterRock_M.png
-  artifactKey: Guid(c365ee81540b9e54d8beeedfe36347b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/waterRock_M.png using Guid(c365ee81540b9e54d8beeedfe36347b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08536b24f812771d52f1388624aa9262') in 0.024716 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 13.046013 seconds.
-  path: Assets/waterRock_N.png
-  artifactKey: Guid(2327707653d125447a3c6f9ec8a3620a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/waterRock_N.png using Guid(2327707653d125447a3c6f9ec8a3620a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9046d3772c23ba6167bf4c7506392b') in 0.016404 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 15.002020 seconds.
-  path: Assets/waterRock.fbx
-  artifactKey: Guid(a42ed21c16df10b42b7bd01ea2c0f7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/waterRock.fbx using Guid(a42ed21c16df10b42b7bd01ea2c0f7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728f72dd3cab07a526e6e0676a3802b6') in 0.037219 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 3.601189 seconds.
-  path: Assets/rockSilverLava.fbx
-  artifactKey: Guid(57f3d4b70209eed4ebce6b897882c968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rockSilverLava.fbx using Guid(57f3d4b70209eed4ebce6b897882c968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2243c4a316a3f85dff35b9762dd46af5') in 0.057594 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 28.355631 seconds.
-  path: Assets/lava&metalRock.fbx
-  artifactKey: Guid(57f3d4b70209eed4ebce6b897882c968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/lava&metalRock.fbx using Guid(57f3d4b70209eed4ebce6b897882c968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd55ef54eddb6f60c47a2fdc0f64f460f') in 0.014477 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 15.639881 seconds.
-  path: Assets/lavaRock.fbx
-  artifactKey: Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/lavaRock.fbx using Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17b89ba97330330051ff57287fca4b7') in 0.014838 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 38.769115 seconds.
-  path: Assets/waterRock Variant.prefab
-  artifactKey: Guid(dc1b9d59ca159ed40a468a70f802dde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/waterRock Variant.prefab using Guid(dc1b9d59ca159ed40a468a70f802dde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9667e9873481603c25ba536c4ace448b') in 0.014134 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 26.885667 seconds.
-  path: Assets/Rocks and Rock Materials
-  artifactKey: Guid(49aff76b5ea824240a766a87915d7140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials using Guid(49aff76b5ea824240a766a87915d7140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ea35927816d5065c9320c621316fe2') in 0.000728 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 55.908332 seconds.
-  path: Assets/Materials/Textures/rock_standardSurface1_BaseMap.png
-  artifactKey: Guid(06effaa598c28d94f95ea8e18ba19496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Textures/rock_standardSurface1_BaseMap.png using Guid(06effaa598c28d94f95ea8e18ba19496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d194fb586cb012479c5d7b79320269a') in 0.024963 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 50.558765 seconds.
-  path: Assets/Rocks and Rock Materials/Rock variants for use
-  artifactKey: Guid(9a69741e9770fba4fa11230d5b467a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/Rock variants for use using Guid(9a69741e9770fba4fa11230d5b467a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69120a8d60827cd82f7292df1f3eee74') in 0.000795 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 30.037022 seconds.
-  path: Assets/Rocks and Rock Materials/Rock variants for use/waterRock Variant.prefab
-  artifactKey: Guid(dc1b9d59ca159ed40a468a70f802dde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/Rock variants for use/waterRock Variant.prefab using Guid(dc1b9d59ca159ed40a468a70f802dde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df65e8de02c3564c59318b4aa922129d') in 0.064588 seconds
+  Time since last request: 3.371490 seconds.
+  path: Assets/ImportedModels/BearV3.fbx
+  artifactKey: Guid(3bf1468d34a1e7f4fadb67c4fb160fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImportedModels/BearV3.fbx using Guid(3bf1468d34a1e7f4fadb67c4fb160fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cdcf8efdcddc7abd00c6eda5352160b') in 0.058062 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 19
 ========================================================================
 Received Import Request.
-  Time since last request: 32.282288 seconds.
-  path: Assets/rock_standardSurface1_Normal.png
-  artifactKey: Guid(b76b5173b5fc4ed4a9ecc359cdd9fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rock_standardSurface1_Normal.png using Guid(b76b5173b5fc4ed4a9ecc359cdd9fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af7a0c367fed2f20208eedeb5e7f168') in 0.022023 seconds
+  Time since last request: 2.603366 seconds.
+  path: Assets/InventoryObjects/Rock.asset
+  artifactKey: Guid(aca7688266300454ca88fd17d358824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InventoryObjects/Rock.asset using Guid(aca7688266300454ca88fd17d358824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c171b43b426500599f471c9f8d1a543') in 0.001917 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 1.611429 seconds.
-  path: Assets/rock_standardSurface1_BaseMap.png
-  artifactKey: Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rock_standardSurface1_BaseMap.png using Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04957b0a3f9b9cf2e2aa0e86e435b89') in 0.022247 seconds
+  Time since last request: 2.194911 seconds.
+  path: Assets/Materials/lavaRock.mat
+  artifactKey: Guid(314f659196fafe4418b9050c259328bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/lavaRock.mat using Guid(314f659196fafe4418b9050c259328bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e302732c245c9405d63f31957017c077') in 0.225927 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 5
 ========================================================================
 Received Import Request.
-  Time since last request: 16.641444 seconds.
-  path: Assets/Rocks and Rock Materials/rock_standardSurface1_BaseMap - Copy.png
-  artifactKey: Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rock_standardSurface1_BaseMap - Copy.png using Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4070fefb3b5cc46dcc127905a110781a') in 0.021923 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 37.093696 seconds.
-  path: Assets/Rocks and Rock Materials/rockBase_BC.png
-  artifactKey: Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rockBase_BC.png using Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30cc92e164772fc4c50a63bf0052c5d3') in 0.026090 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.714616 seconds.
-  path: Assets/Rocks and Rock Materials/rock_standardSurface1_Emissive - Copy.png
-  artifactKey: Guid(9f6c8a0f874de044e9f8740b216ba517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rock_standardSurface1_Emissive - Copy.png using Guid(9f6c8a0f874de044e9f8740b216ba517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a4f7d1325ae339e50f0ccd9914999e5') in 0.020519 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 12.979921 seconds.
-  path: Assets/Rocks and Rock Materials/rockBase_EM.png
-  artifactKey: Guid(9f6c8a0f874de044e9f8740b216ba517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rockBase_EM.png using Guid(9f6c8a0f874de044e9f8740b216ba517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4cc054bf5055254b39f122b3e4e595a') in 0.017661 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.958254 seconds.
-  path: Assets/Rocks and Rock Materials/rock_standardSurface1_MaskMap - Copy.png
-  artifactKey: Guid(f87e7685fbe98d3428ed620424f34c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rock_standardSurface1_MaskMap - Copy.png using Guid(f87e7685fbe98d3428ed620424f34c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da345323ff41b7548e664f94c7f0866') in 0.023108 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 12.285567 seconds.
-  path: Assets/Rocks and Rock Materials/rockBase_M.png
-  artifactKey: Guid(f87e7685fbe98d3428ed620424f34c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rockBase_M.png using Guid(f87e7685fbe98d3428ed620424f34c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55f57f287b51712b732ef5fa0825270b') in 0.019730 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.981853 seconds.
-  path: Assets/Rocks and Rock Materials/rock_standardSurface1_Normal - Copy.png
-  artifactKey: Guid(b76b5173b5fc4ed4a9ecc359cdd9fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rock_standardSurface1_Normal - Copy.png using Guid(b76b5173b5fc4ed4a9ecc359cdd9fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86545281b613cbf233579ceddbdfb224') in 0.027187 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 18.181086 seconds.
-  path: Assets/Rocks and Rock Materials/baseRock_N.png
-  artifactKey: Guid(b76b5173b5fc4ed4a9ecc359cdd9fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/baseRock_N.png using Guid(b76b5173b5fc4ed4a9ecc359cdd9fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8332cdaa0dabef76e3c3e07349c8fc50') in 0.028340 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 16.652394 seconds.
+  Time since last request: 31.643296 seconds.
   path: Assets/Rocks and Rock Materials/baseRock_BC.png
   artifactKey: Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/baseRock_BC.png using Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '916a2ff3b0024ebea5c9299c0eea0774') in 0.024211 seconds
+Start importing Assets/Rocks and Rock Materials/baseRock_BC.png using Guid(b0dfdc100d4fa2943b13354c96e229f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b214b40a3ba2aed09d8354637d50fc01') in 0.057359 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 12.554973 seconds.
-  path: Assets/Rocks and Rock Materials/baseRock_EM.png
-  artifactKey: Guid(9f6c8a0f874de044e9f8740b216ba517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/baseRock_EM.png using Guid(9f6c8a0f874de044e9f8740b216ba517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e3dcf876b10a2f629f420398447a8f5') in 0.020161 seconds
+  Time since last request: 0.000019 seconds.
+  path: Assets/Rocks and Rock Materials/rock_standardSurface1_Normal.png
+  artifactKey: Guid(675928fbf4054914ea7571eae9118d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Rock Materials/rock_standardSurface1_Normal.png using Guid(675928fbf4054914ea7571eae9118d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30039b8d3eca92d193005488f1763723') in 0.042427 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 16.573145 seconds.
-  path: Assets/Rocks and Rock Materials/baseRock_M.png
-  artifactKey: Guid(f87e7685fbe98d3428ed620424f34c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/baseRock_M.png using Guid(f87e7685fbe98d3428ed620424f34c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51e48c4fbb219089d692b3cbbdad3002') in 0.021811 seconds
+  Time since last request: 0.000021 seconds.
+  path: Assets/Rocks and Rock Materials/rock_standardSurface1_MaskMap.png
+  artifactKey: Guid(a27c8d9b775e9714aa385159940d9b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Rock Materials/rock_standardSurface1_MaskMap.png using Guid(a27c8d9b775e9714aa385159940d9b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10b03648845b51c13e3ce27bd0a15c2b') in 0.039913 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 4.324354 seconds.
-  path: Assets/Rocks and Rock Materials/rockWater.fbx
-  artifactKey: Guid(d7f984b1f935996489bc31376d94caba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/rockWater.fbx using Guid(d7f984b1f935996489bc31376d94caba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25c8ea6e3981df6fa28323dd56e00ea4') in 0.060492 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 71.563664 seconds.
-  path: Assets/Rocks and Rock Materials/Rock variants for use/baseRock Variant.prefab
-  artifactKey: Guid(5f11c5850b0546942a398ca4eb3d924b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/Rock variants for use/baseRock Variant.prefab using Guid(5f11c5850b0546942a398ca4eb3d924b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1446a7db5d6bb96f3d640db8f845d887') in 0.013031 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 15
-========================================================================
-Received Import Request.
-  Time since last request: 133.796957 seconds.
-  path: Assets/lavaRock_N.png
-  artifactKey: Guid(4774b6255786a2f46831d734927aa990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/lavaRock_N.png using Guid(4774b6255786a2f46831d734927aa990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09884da3e2313b6eaf60abce479a409') in 0.022900 seconds
+  Time since last request: 0.000020 seconds.
+  path: Assets/Rocks and Rock Materials/waterRock_N.png
+  artifactKey: Guid(2327707653d125447a3c6f9ec8a3620a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Rock Materials/waterRock_N.png using Guid(2327707653d125447a3c6f9ec8a3620a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d6ad303a4285cfb53bffb4b8506640c') in 0.034019 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 3.525463 seconds.
-  path: Assets/lavaRock_BC.png
-  artifactKey: Guid(2a9d482f889024e41b4ce08a858b211f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/lavaRock_BC.png using Guid(2a9d482f889024e41b4ce08a858b211f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3027a8cc453b73d68007679522e488f') in 0.024362 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Rocks and Rock Materials/waterRock_EM.png
+  artifactKey: Guid(e582c4f02b56092429dd4abdd3c470b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Rock Materials/waterRock_EM.png using Guid(e582c4f02b56092429dd4abdd3c470b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd357c53b9f31ec227198f12531e82f81') in 0.032154 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 35.457335 seconds.
-  path: Assets/Rocks and Rock Materials/lavaRock.fbx
-  artifactKey: Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/lavaRock.fbx using Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11b73f6323e13328a730d9b36a97623') in 0.044527 seconds
+  Time since last request: 0.000037 seconds.
+  path: Assets/Rocks and Rock Materials/lavaRock_E.png
+  artifactKey: Guid(b8c98fecfeaa13f43a928fdc7bc72bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Rock Materials/lavaRock_E.png using Guid(b8c98fecfeaa13f43a928fdc7bc72bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f4bf289ba609aa84d9112b4a49a9f24') in 0.037351 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 39.708052 seconds.
-  path: Assets/Rocks and Rock Materials/lavaRock.fbx
-  artifactKey: Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/lavaRock.fbx using Guid(f1ed15240edce554fa2b14939e3197b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1f6808fc54eaa1d887e88af637ae5e') in 0.057006 seconds
+  Time since last request: 9.044035 seconds.
+  path: Assets/Rocks and Rock Materials/Rock variants for use/waterRock Variant.prefab
+  artifactKey: Guid(dc1b9d59ca159ed40a468a70f802dde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Rock Materials/Rock variants for use/waterRock Variant.prefab using Guid(dc1b9d59ca159ed40a468a70f802dde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0cc5bc3fd6032e25dfc41390ea8240') in 0.042698 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
+Number of asset objects unloaded after import = 19
 ========================================================================
 Received Import Request.
-  Time since last request: 138.339577 seconds.
-  path: Assets/Rocks and Rock Materials/Rock variants for use/lavaRock Variant.prefab
-  artifactKey: Guid(57a70745041a6c2448267117f894b8ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Rock Materials/Rock variants for use/lavaRock Variant.prefab using Guid(57a70745041a6c2448267117f894b8ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63b2a43f0e761a5915c6d31184b201b') in 0.019118 seconds
+  Time since last request: 85.969359 seconds.
+  path: Assets/Sprites/Sapphire.png
+  artifactKey: Guid(688f6466b80599e4582f2794687e3a2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Sapphire.png using Guid(688f6466b80599e4582f2794687e3a2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd13bc242eaacf7adbd61e57bce604617') in 0.041021 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 20
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.297915 seconds.
+  path: Assets/StarterAssets/TutorialInfo/Icons/ReadMeImg.PNG
+  artifactKey: Guid(44a17a5b205fcd349a24700e6f5615bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/TutorialInfo/Icons/ReadMeImg.PNG using Guid(44a17a5b205fcd349a24700e6f5615bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0860f91285b17dc906ff154e9d77aec') in 0.025465 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.639265 seconds.
+  path: Assets/Sprites/Emerald.png
+  artifactKey: Guid(bfc85ead4e812974f8f38afbecaf44e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Emerald.png using Guid(bfc85ead4e812974f8f38afbecaf44e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484151646d90610899baa22e13f894ff') in 0.029355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002758 seconds.
+  path: Assets/UIImages/Bear Game title.png
+  artifactKey: Guid(682922710cabbe847a10532c6ca30703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UIImages/Bear Game title.png using Guid(682922710cabbe847a10532c6ca30703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a59c1be760dda5d51026fd7cbcc208d') in 0.025395 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.759 seconds
+Refreshing native plugins compatible for Editor in 7.14 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.659 seconds
+Domain Reload Profiling: 2411ms
+	BeginReloadAssembly (148ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (538ms)
+		LoadAssemblies (330ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (254ms)
+			TypeCache.Refresh (247ms)
+				TypeCache.ScanAssembly (234ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1660ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (544ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (116ms)
+			ProcessInitializeOnLoadAttributes (343ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 9.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5543 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (0.7 MB). Loaded Objects now: 6182.
+Memory consumption went from 199.7 MB to 199.0 MB.
+Total: 5.120400 ms (FindLiveObjects: 0.469100 ms CreateObjectMapping: 0.582100 ms MarkObjects: 3.731800 ms  DeleteObjects: 0.336500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.751 seconds
+Refreshing native plugins compatible for Editor in 7.88 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.629 seconds
+Domain Reload Profiling: 2372ms
+	BeginReloadAssembly (141ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (536ms)
+		LoadAssemblies (333ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (250ms)
+			TypeCache.Refresh (240ms)
+				TypeCache.ScanAssembly (225ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1629ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (552ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (116ms)
+			ProcessInitializeOnLoadAttributes (345ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 9.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5543 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (0.7 MB). Loaded Objects now: 6197.
+Memory consumption went from 199.7 MB to 199.0 MB.
+Total: 4.678700 ms (FindLiveObjects: 0.494600 ms CreateObjectMapping: 0.360700 ms MarkObjects: 3.471700 ms  DeleteObjects: 0.350900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.818 seconds
+Refreshing native plugins compatible for Editor in 10.21 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.703 seconds
+Domain Reload Profiling: 2513ms
+	BeginReloadAssembly (143ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (599ms)
+		LoadAssemblies (350ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (295ms)
+			TypeCache.Refresh (284ms)
+				TypeCache.ScanAssembly (271ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1703ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (545ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (114ms)
+			ProcessInitializeOnLoadAttributes (338ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (19ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 9.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5543 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (0.7 MB). Loaded Objects now: 6212.
+Memory consumption went from 199.7 MB to 199.0 MB.
+Total: 4.806200 ms (FindLiveObjects: 0.493400 ms CreateObjectMapping: 0.359100 ms MarkObjects: 3.503900 ms  DeleteObjects: 0.448900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1310.274654 seconds.
+  path: Assets/Animations/standing melee attack downward.fbx
+  artifactKey: Guid(662f1989b2e41dc47ad75c8cea13e706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/standing melee attack downward.fbx using Guid(662f1989b2e41dc47ad75c8cea13e706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd940262c5a4ffff38741cb30ee923315') in 0.041343 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 119
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.754 seconds
+Refreshing native plugins compatible for Editor in 6.66 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.570 seconds
+Domain Reload Profiling: 2317ms
+	BeginReloadAssembly (141ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (538ms)
+		LoadAssemblies (334ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (251ms)
+			TypeCache.Refresh (242ms)
+				TypeCache.ScanAssembly (230ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1571ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (531ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (110ms)
+			ProcessInitializeOnLoadAttributes (334ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 8.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5543 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (0.7 MB). Loaded Objects now: 6227.
+Memory consumption went from 199.8 MB to 199.0 MB.
+Total: 4.752600 ms (FindLiveObjects: 0.709000 ms CreateObjectMapping: 0.350900 ms MarkObjects: 3.289900 ms  DeleteObjects: 0.401600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
