@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 24
   itemName: Medkit
   itemDescription: Contains some basic medical supplies. Made by Grizzcorp.
-  value: 25
+  value: 7
   icon: {fileID: 21300000, guid: e2bb9cda7c44a8b43bef9e58cba0b234, type: 3}
   type: 4
   stackable: 0

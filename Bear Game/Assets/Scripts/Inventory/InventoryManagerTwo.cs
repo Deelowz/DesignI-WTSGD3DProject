@@ -225,14 +225,15 @@ public class InventoryManagerTwo : MonoBehaviour
         }
         else if (interactButton.text == "Unequip")
         {
+
             PickupItem(selectedButton); // Just picks up the item, putting it in the inventory if there's room.
             UpdateStats();
         }
         else if (interactButton.text == "Use")
         {
-            if (health < 100) // Checks that the player isn't at full health already.
+            if (combatVersionOne.healthSlider.value < combatVersionOne.healthSlider.maxValue) // Checks that the player isn't at full health already.
             {
-                health += selectedButton.GetComponent<ItemController>().Item.value; //Heals player!
+                combatVersionOne.HealHealth(selectedButton.GetComponent<ItemController>().Item.value); //Heals player!
 
                 selectedButton.GetComponent<ItemController>().Item = emptyItem;
                 UpdateSlots();
@@ -245,8 +246,10 @@ public class InventoryManagerTwo : MonoBehaviour
 
     public void UpdateStats() // Updates all the stats to reflect whatever is equipped.
     {
-        healthBuff = equippedSlot[0].GetComponent<ItemController>().Item.value;
-        armor = equippedSlot[1].GetComponent<ItemController>().Item.value;
+        combatVersionOne.HealthBoost(equippedSlot[0].GetComponent<ItemController>().Item.value); // Adds healthboost
+        combatVersionOne.armor = equippedSlot[1].GetComponent<ItemController>().Item.value; // Armor
+        combatVersionOne.armorSlider.value = equippedSlot[1].GetComponent<ItemController>().Item.value; // Updates the armor slider.
+
         meleeDamage = equippedSlot[2].GetComponent<ItemController>().Item.value;
         rangedDamage = equippedSlot[3].GetComponent<ItemController>().Item.value;
     }
@@ -298,5 +301,74 @@ public class InventoryManagerTwo : MonoBehaviour
         dropButton.SetActive(true);
         interactButton.transform.parent.gameObject.SetActive(true);
 
+    }
+
+
+    public void ItemStolen()
+    {
+        int chosenSlot = Random.Range(0, 18); // Chooses random inventory slot.
+        Debug.Log(chosenSlot);
+
+        if (chosenSlot > 3) // Checks if the slot is going to be inventory (5-19) or equipped item slots (1-4).
+        {
+            chosenSlot -= 4; // Subtracts 4 to adjust for choosing one of the 15 inventory slots.
+            if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.itemName == "Empty" || inventorySlot[chosenSlot].GetComponent<ItemController>().Item.type == 6) // Checks if it is empty and reruns method if it is until it's an actual item. Also checks if it is key item.
+            {
+                ItemStolen();
+            }
+            else if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.stackable == true)
+            {
+                selectedButton = inventorySlot[chosenSlot]; // Selects it.
+                // Play sound effect.
+
+                inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount--;
+                UpdateSlots();
+
+                if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount <= 0)
+                {
+                    inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount = 1;
+                    DropItem(); // Drops it.
+                }
+
+            }
+            else
+            {
+                selectedButton = inventorySlot[chosenSlot]; // Selects it.
+                // Play sound effect.
+                DropItem(); // Drops it.
+            }
+        }
+        else if (chosenSlot > -1 && chosenSlot < 4)
+        {
+            if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.itemName == "Empty") // Checks if it is empty and reruns method if it is until it's an actual item.
+            {
+                ItemStolen();
+            }
+            else if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.stackable == true)
+            {
+                selectedButton = equippedSlot[chosenSlot]; // Selects it.
+                // Play sound effect.
+
+                equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount--;
+                UpdateSlots();
+
+                if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount <= 0)
+                {
+                    equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount = 1;
+                    DropItem(); // Drops it.
+                }
+
+            }
+            else
+            {
+                selectedButton = equippedSlot[chosenSlot]; // Selects it.
+                // Play sound effect.
+                DropItem(); // Drops it.
+            }
+        }
+        else
+        {
+            
+        }
     }
 }

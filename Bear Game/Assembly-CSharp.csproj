@@ -82,9 +82,11 @@
     <Compile Include="Assets\Scripts\Menu Manager.cs" />
     <Compile Include="Assets\Scripts\Inventory\ChestInventoryManager.cs" />
     <Compile Include="Assets\Scripts\Combat\CombatVersionOne.cs" />
+    <Compile Include="Assets\Scripts\GeederArm.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\SpikeTrap.cs" />
+    <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\HealthBarTurn.cs" />

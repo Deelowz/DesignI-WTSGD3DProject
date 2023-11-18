@@ -12,6 +12,9 @@ public class CombatVersionOne : MonoBehaviour
     public UnityEngine.UI.Slider healthSlider;
     public TMP_Text healthText;
 
+    public UnityEngine.UI.Slider armorSlider;
+    public int armor = 0;
+
     //-----------------Sword and Combat Stuff---------------------
     public bool isSwinging = false;
     public bool isRecoiling = false;
@@ -30,13 +33,14 @@ public class CombatVersionOne : MonoBehaviour
     public Camera birdEyeCamera;
 
     [Header("References")]
-    public Transform cam;
+    //public Transform cam;
     public Transform attackPoint;
     public GameObject[] objectToThrow;
 
     [Header("Settings")]
     //public int totalThrows;
     public float throwCooldown;
+    public float swingCooldown;
 
     [Header("Throwing")]
     public KeyCode throwKey = KeyCode.Mouse1;
@@ -59,35 +63,43 @@ public class CombatVersionOne : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // Aiming
         Aim();
-        //if (Input.GetMouseButtonDown(0)) // Player left clicks, swinging the sword.
-        //{
-        //    if (!isSwinging && !isRecoiling) // Makes sure the player isn't in the middle of attacking or getting hit.
-        //    {
-        //        if (swordSlot.Item.id == 21) // The sword is the Blue Marlin Sabre
-        //        {
-        //            swordIndex = 0;
-        //        }
-        //        else if (swordSlot.Item.id == 22) // The sword is the Eel Sword
-        //        {
-        //            swordIndex = 1;
-        //        }
-        //        else if (swordSlot.Item.id == 23) // The sword is Chloe's Sword
-        //        {
-        //            swordIndex = 2;
-        //        }
-        //        else // No sword equipped
-        //        {
-        //            swordIndex = 3;
-        //        }
 
-        //        isSwinging = true; // Sets isSwinging to true so the player cannot attack until the animation is over.
-        //        sword[swordIndex].GetComponent<Animator>().Play("Swing"); // Plays the animation of the selected sword regardless of if it can hit something.
-        //        sword[swordIndex].GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f); // Changes the pitch of the sound slightly to add variety.
-        //        sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
-        //    }
-        //}
+        // Sword Swinging
+        if (Input.GetMouseButtonDown(0)) // Player left clicks, swinging the sword.
+        {
+            if (!isSwinging && !isRecoiling) // Makes sure the player isn't in the middle of attacking or getting hit.
+            {
+                if (swordSlot.Item.id == 21) // The sword is the Blue Marlin Sabre
+                {
+                    swordIndex = 0;
+                }
+                else if (swordSlot.Item.id == 22) // The sword is the Eel Sword
+                {
+                    swordIndex = 1;
+                }
+                else if (swordSlot.Item.id == 23) // The sword is Chloe's Sword
+                {
+                    swordIndex = 2;
+                }
+                else // No sword equipped
+                {
+                    swordIndex = 3;
+                    GetComponent<Animator>().Play("horizontal attack");
+                }
+
+                isSwinging = true; // Sets isSwinging to true so the player cannot attack until the animation is over.
+                //sword[swordIndex].GetComponent<Animator>().Play("Swing"); // Plays the animation of the selected sword regardless of if it can hit something.
+                //sword[swordIndex].GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f); // Changes the pitch of the sound slightly to add variety.
+                //sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
+
+                Invoke(nameof(ResetSwordSwing), swingCooldown);
+            }
+        }
+
+
+        // Rock Throwing Check
         if (Input.GetMouseButtonDown(1) && readyToThrow && inventoryManagerTwo.equippedSlot[3].GetComponent<ItemController>().Item.amount > 0 && inventoryManagerTwo.equippedSlot[3].GetComponent<ItemController>().Item.type == 3) // Player right clicks, throwing a rock. It checks if they can and have the rocks.
         {
             ThrowRock();
@@ -104,9 +116,22 @@ public class CombatVersionOne : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        healthSlider.value = health;
-        healthText.text = health + "/15";
+        // health -= damage;
+        //healthSlider.value = health;
+        healthSlider.value -= (damage-armor);
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+    }
+
+    public void HealthBoost(int boost)
+    {
+        healthSlider.maxValue = health + boost;
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+    }
+
+    public void HealHealth(int health)
+    {
+        healthSlider.value += health;
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
     }
 
     public void ThrowRock()
@@ -196,5 +221,10 @@ public class CombatVersionOne : MonoBehaviour
     private void ResetThrow()
     {
         readyToThrow = true;
+    }
+
+    private void ResetSwordSwing()
+    {
+        isSwinging = false;
     }
 }

@@ -91,22 +91,22 @@ public class LootGenerationTest : MonoBehaviour
 
         if (p <= 0.03125)
         {
-            print("RARE");
+            //print("RARE");
             return 'r';
         }
         else if (p > 0.03125 && p <= 0.09375)
         {
-            print("UNCOMMON");
+            //print("UNCOMMON");
             return 'u';
         }
         else if (p > 0.09375 && p <= 0.25)
         {
-            print("COMMON");
+            //print("COMMON");
             return 'c';
         }
         else
         {
-            print("EMPTY");
+            //print("EMPTY");
             return 'e';
         }
     }
