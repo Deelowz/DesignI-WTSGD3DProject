@@ -99,8 +99,7 @@ public class Enemy: MonoBehaviour
     void Die()
     {
         animator.SetTrigger("death");
-        StartCoroutine(DestroyAfterDelay(2.0f));
-        Destroy(this.gameObject);
+        StartCoroutine(DestroyAfterAnimation(4.0f));
     }
  
     public void TakeDamage(int damageAmount)
@@ -136,11 +135,25 @@ public class Enemy: MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, aggroRange);
     }
-    IEnumerator DestroyAfterDelay(float delay)
+    IEnumerator DestroyAfterAnimation(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        float deathAnimationLength = GetAnimationLength("death");
+        yield return new WaitForSeconds(Mathf.Max(deathAnimationLength, delay));
 
         // Destroy the GameObject after the specified delay.
         Destroy(gameObject);
     }
+    float GetAnimationLength(string animationName)
+{
+    AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(0);
+    foreach (AnimatorClipInfo info in clipInfo)
+    {
+        if (info.clip.name == animationName)
+        {
+            return info.clip.length;
+        }
+    }
+
+    return 3.0f; 
+}
 }
