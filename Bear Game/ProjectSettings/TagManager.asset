@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Rock
   - Spike
+  - Interactable
   layers:
   - Default
   - TransparentFX

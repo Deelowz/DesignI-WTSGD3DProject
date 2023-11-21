@@ -5,15 +5,20 @@ using UnityEngine;
 public class GeederArm : MonoBehaviour
 {
     public Animator animator;
+    public Animator movementAnimator;
     public InventoryManagerTwo inventoryManagerTwo;
 
+    public GameObject arm;
+
+
     public bool isSwiping = false;
-    public float coolDown = 3f;
+    private float coolDown = 5f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -27,7 +32,10 @@ public class GeederArm : MonoBehaviour
         if (!isSwiping)
         {
             isSwiping = true;
-            //animator.Play("Swipe");
+
+            animator.Play("Swipe");
+            movementAnimator.Play("ArmSwipeMove");
+
             Invoke(nameof(ResetSwipe), coolDown);
         }
 
@@ -43,6 +51,7 @@ public class GeederArm : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inventoryManagerTwo.ItemStolen();
+            Swipe();
         }
     }
 }

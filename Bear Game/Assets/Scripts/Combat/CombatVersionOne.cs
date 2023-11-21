@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CombatVersionOne : MonoBehaviour
@@ -67,34 +68,52 @@ public class CombatVersionOne : MonoBehaviour
         Aim();
 
         // Sword Swinging
-        if (Input.GetMouseButtonDown(0)) // Player left clicks, swinging the sword.
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) // Player left clicks, swinging the sword.
         {
-            if (!isSwinging && !isRecoiling) // Makes sure the player isn't in the middle of attacking or getting hit.
+            Ray ray = birdEyeCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+
+            if (Physics.Raycast(ray, out hit))
             {
-                if (swordSlot.Item.id == 21) // The sword is the Blue Marlin Sabre
+                if(hit.collider.tag == "Interactable")
                 {
-                    swordIndex = 0;
-                }
-                else if (swordSlot.Item.id == 22) // The sword is the Eel Sword
-                {
-                    swordIndex = 1;
-                }
-                else if (swordSlot.Item.id == 23) // The sword is Chloe's Sword
-                {
-                    swordIndex = 2;
-                }
-                else // No sword equipped
-                {
-                    swordIndex = 3;
-                    GetComponent<Animator>().Play("horizontal attack");
-                }
 
-                isSwinging = true; // Sets isSwinging to true so the player cannot attack until the animation is over.
-                //sword[swordIndex].GetComponent<Animator>().Play("Swing"); // Plays the animation of the selected sword regardless of if it can hit something.
-                //sword[swordIndex].GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f); // Changes the pitch of the sound slightly to add variety.
-                //sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
+                }
+                else // SWINGS IF NO CLICKING ON DOOR
+                {
+                    if (!isSwinging && !isRecoiling) // Makes sure the player isn't in the middle of attacking or getting hit.
+                    {
+                        if (swordSlot.Item.id == 21) // The sword is the Blue Marlin Sabre
+                        {
+                            swordIndex = 0;
+                        }
+                        else if (swordSlot.Item.id == 22) // The sword is the Eel Sword
+                        {
+                            swordIndex = 1;
+                        }
+                        else if (swordSlot.Item.id == 23) // The sword is Chloe's Sword
+                        {
+                            swordIndex = 2;
+                        }
+                        else // No sword equipped
+                        {
+                            swordIndex = 3;
+                            GetComponent<Animator>().Play("horizontal attack");
+                        }
 
-                Invoke(nameof(ResetSwordSwing), swingCooldown);
+                        isSwinging = true; // Sets isSwinging to true so the player cannot attack until the animation is over.
+                                           //sword[swordIndex].GetComponent<Animator>().Play("Swing"); // Plays the animation of the selected sword regardless of if it can hit something.
+                                           //sword[swordIndex].GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f); // Changes the pitch of the sound slightly to add variety.
+                                           //sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
+
+                        Invoke(nameof(ResetSwordSwing), swingCooldown);
+                    }
+                }
+            }
+            else
+            {
+
             }
         }
 

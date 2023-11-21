@@ -297,6 +297,7 @@ public class InventoryManagerTwo : MonoBehaviour
             }
         }
 
+
         // Important, sets the buttons back to active.
         dropButton.SetActive(true);
         interactButton.transform.parent.gameObject.SetActive(true);
@@ -306,69 +307,73 @@ public class InventoryManagerTwo : MonoBehaviour
 
     public void ItemStolen()
     {
-        int chosenSlot = Random.Range(0, 18); // Chooses random inventory slot.
-        Debug.Log(chosenSlot);
-
-        if (chosenSlot > 3) // Checks if the slot is going to be inventory (5-19) or equipped item slots (1-4).
+        // Checks to make sure your inventory isn't empty
+        if (inventorySlotFilled[0] || inventorySlotFilled[1] || inventorySlotFilled[2] || inventorySlotFilled[3] || inventorySlotFilled[4] || inventorySlotFilled[5] || inventorySlotFilled[6] || inventorySlotFilled[7] || inventorySlotFilled[8] || inventorySlotFilled[9] || inventorySlotFilled[10] || inventorySlotFilled[11] || inventorySlotFilled[12] || inventorySlotFilled[13] || inventorySlotFilled[14] || equippedSlotFilled[0] || equippedSlotFilled[1] || equippedSlotFilled[2] || equippedSlotFilled[3])
         {
-            chosenSlot -= 4; // Subtracts 4 to adjust for choosing one of the 15 inventory slots.
-            if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.itemName == "Empty" || inventorySlot[chosenSlot].GetComponent<ItemController>().Item.type == 6) // Checks if it is empty and reruns method if it is until it's an actual item. Also checks if it is key item.
-            {
-                ItemStolen();
-            }
-            else if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.stackable == true)
-            {
-                selectedButton = inventorySlot[chosenSlot]; // Selects it.
-                // Play sound effect.
+            int chosenSlot = Random.Range(0, 18); // Chooses random inventory slot.
+            Debug.Log(chosenSlot);
 
-                inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount--;
-                UpdateSlots();
-
-                if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount <= 0)
+            if (chosenSlot > 3) // Checks if the slot is going to be inventory (5-19) or equipped item slots (1-4).
+            {
+                chosenSlot -= 4; // Subtracts 4 to adjust for choosing one of the 15 inventory slots.
+                if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.itemName == "Empty" || inventorySlot[chosenSlot].GetComponent<ItemController>().Item.type == 6) // Checks if it is empty and reruns method if it is until it's an actual item. Also checks if it is key item.
                 {
-                    inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount = 1;
+                    ItemStolen();
+                }
+                else if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.stackable == true)
+                {
+                    selectedButton = inventorySlot[chosenSlot]; // Selects it.
+                                                                // Play sound effect.
+
+                    inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount--;
+                    UpdateSlots();
+
+                    if (inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount <= 0)
+                    {
+                        inventorySlot[chosenSlot].GetComponent<ItemController>().Item.amount = 1;
+                        DropItem(); // Drops it.
+                    }
+
+                }
+                else
+                {
+                    selectedButton = inventorySlot[chosenSlot]; // Selects it.
+                                                                // Play sound effect.
                     DropItem(); // Drops it.
                 }
+            }
+            else if (chosenSlot > -1 && chosenSlot < 4)
+            {
+                if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.itemName == "Empty") // Checks if it is empty and reruns method if it is until it's an actual item.
+                {
+                    ItemStolen();
+                }
+                else if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.stackable == true)
+                {
+                    selectedButton = equippedSlot[chosenSlot]; // Selects it.
+                                                               // Play sound effect.
 
+                    equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount--;
+                    UpdateSlots();
+
+                    if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount <= 0)
+                    {
+                        equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount = 1;
+                        DropItem(); // Drops it.
+                    }
+
+                }
+                else
+                {
+                    selectedButton = equippedSlot[chosenSlot]; // Selects it.
+                                                               // Play sound effect.
+                    DropItem(); // Drops it.
+                }
             }
             else
             {
-                selectedButton = inventorySlot[chosenSlot]; // Selects it.
-                // Play sound effect.
-                DropItem(); // Drops it.
-            }
-        }
-        else if (chosenSlot > -1 && chosenSlot < 4)
-        {
-            if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.itemName == "Empty") // Checks if it is empty and reruns method if it is until it's an actual item.
-            {
-                ItemStolen();
-            }
-            else if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.stackable == true)
-            {
-                selectedButton = equippedSlot[chosenSlot]; // Selects it.
-                // Play sound effect.
-
-                equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount--;
-                UpdateSlots();
-
-                if (equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount <= 0)
-                {
-                    equippedSlot[chosenSlot].GetComponent<ItemController>().Item.amount = 1;
-                    DropItem(); // Drops it.
-                }
 
             }
-            else
-            {
-                selectedButton = equippedSlot[chosenSlot]; // Selects it.
-                // Play sound effect.
-                DropItem(); // Drops it.
-            }
-        }
-        else
-        {
-            
         }
     }
 }
