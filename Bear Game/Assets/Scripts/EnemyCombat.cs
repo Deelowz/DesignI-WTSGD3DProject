@@ -6,6 +6,8 @@ public class EnemyCombat : MonoBehaviour
 {
     bool canDealDamage;
     bool hasDealtDamage;
+
+    Enemy enemy;
  
     [SerializeField] float weaponLength;
     [SerializeField] float weaponDamage;
@@ -13,6 +15,8 @@ public class EnemyCombat : MonoBehaviour
     {
         canDealDamage = false;
         hasDealtDamage = false;
+
+        enemy = GetComponentInParent<Enemy>();
     }
  
     // Update is called once per frame
@@ -30,6 +34,8 @@ public class EnemyCombat : MonoBehaviour
                     health.TakeDamage(weaponDamage);
                     health.HitVFX(hit.point);
                     hasDealtDamage = true;
+
+                    enemy.AttackCompleted();
                 }
             }
         }
