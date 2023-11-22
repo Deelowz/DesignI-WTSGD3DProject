@@ -24,6 +24,6 @@ public class CameraRoomFollower : MonoBehaviour
 
     public void TransitionToRoom(Vector3 newRoomFloor)
     {
-        target = new Vector3 (newRoomFloor.x, 20f, newRoomFloor.z - 7);
+        target = new Vector3 (newRoomFloor.x, 25f, newRoomFloor.z - 7);
     }
 }

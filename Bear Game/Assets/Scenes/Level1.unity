@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07040005, g: 0.0722506, b: 0.06690102, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -765,7 +765,7 @@ MonoBehaviour:
   - {fileID: 8067001606562842567, guid: e54448f679b463a4e88df75fad556ab5, type: 3}
   - {fileID: 8067001606562842567, guid: 8aac0a599bebefe4e96400f83da50572, type: 3}
   throwCooldown: 0.2
-  swingCooldown: 0.5
+  swingCooldown: 2.5
   throwKey: 324
   throwForce: 15
   throwUpwardForce: 0
@@ -1322,7 +1322,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 160685238}
   m_HandleRect: {fileID: 0}
@@ -2131,7 +2131,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1593392829}
   m_HandleRect: {fileID: 0}
@@ -5763,6 +5763,7 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 3
   aggroRange: 8
+  isDead: 0
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
@@ -6170,6 +6171,7 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 3
   aggroRange: 8
+  isDead: 0
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
@@ -15162,6 +15164,7 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 3
   aggroRange: 8
+  isDead: 0
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
@@ -22957,6 +22960,7 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 3
   aggroRange: 8
+  isDead: 0
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
@@ -23484,7 +23488,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 2044810191}
   m_HandleRect: {fileID: 0}
@@ -28964,7 +28968,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 525739708}
   m_HandleRect: {fileID: 0}
@@ -31963,7 +31967,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1892924570}
   m_HandleRect: {fileID: 0}
@@ -32509,7 +32513,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 318863273}
   m_HandleRect: {fileID: 0}
@@ -33400,6 +33404,7 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 3
   aggroRange: 8
+  isDead: 0
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
@@ -35659,6 +35664,7 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 3
   aggroRange: 8
+  isDead: 0
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
