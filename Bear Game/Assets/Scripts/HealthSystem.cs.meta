@@ -7,6 +7,7 @@ MonoImporter:
   - hitVFX: {instanceID: 0}
   - ragdoll: {instanceID: 0}
   - damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
+  - deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
   - audioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

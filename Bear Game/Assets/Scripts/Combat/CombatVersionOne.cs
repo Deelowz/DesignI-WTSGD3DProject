@@ -27,6 +27,10 @@ public class CombatVersionOne : MonoBehaviour
     public ItemController rockSlot;
 
     public InventoryManagerTwo inventoryManagerTwo;
+    AudioSource audioSource;
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] AudioClip damageSound;
+    [SerializeField] AudioClip deathSound;
 
     //------------------Rock Throw Things---------------------------
     [SerializeField] private LayerMask groundMask;
@@ -57,6 +61,15 @@ public class CombatVersionOne : MonoBehaviour
     void Start()
     {
         readyToThrow = true;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // If AudioSource is not found, create one and attach it
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.volume = 0.2f; // Change this to the desired volume for sounds
     }
 
 
@@ -110,6 +123,11 @@ public class CombatVersionOne : MonoBehaviour
                                            //sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
 
                         Invoke(nameof(ResetSwordSwing), swingCooldown);
+
+                        if (attackSound != null)
+                        {
+                            audioSource.PlayOneShot(attackSound);
+                        }
                     }
                 }
             }

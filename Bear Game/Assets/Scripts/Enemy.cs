@@ -45,6 +45,13 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // If AudioSource is not found, create one and attach it
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.volume = 0.2f; // Change this to the desired volume for sounds
     }
 
     void Update()
@@ -152,7 +159,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Die() method called. Triggering death animation...");
         animator.SetTrigger("death");
 
-        if (deathSound != null)
+        if (deathSound != null && audioSource !=null)
         {
             audioSource.PlayOneShot(deathSound);
         }
@@ -182,24 +189,22 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-
-
     public void TakeDamage(int damageAmount)
+{
+    healthSlider.value -= damageAmount;
+    healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+    animator.SetTrigger("damage");
+
+    if (damageSound != null)
     {
-        healthSlider.value -= damageAmount;
-        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
-        animator.SetTrigger("damage");
-
-        if (damageSound != null)
-        {
-            audioSource.PlayOneShot(damageSound);
-        }
-
-        if (healthSlider.value <= healthSlider.minValue)
-        {
-            Die();
-        }
+        audioSource.PlayOneShot(damageSound);
     }
+
+    if (healthSlider.value <= healthSlider.minValue)
+    {
+        Die();
+    }
+}
 
     public void StartDealDamage()
     {
