@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     float newDestinationCD = 0.5f;
     bool isAttacking;
 
-AudioSource audioSource;
+    AudioSource audioSource;
     [SerializeField] AudioClip attackSound;
     [SerializeField] AudioClip damageSound;
     [SerializeField] AudioClip deathSound;
@@ -63,49 +63,68 @@ AudioSource audioSource;
         }
 
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-    
-    if (distanceToPlayer <= aggroRange)
-    {
-        // Player is within aggro range, track the player
-        if (timePassed >= attackCD)
+
+        if (distanceToPlayer <= aggroRange)
         {
-            if (distanceToPlayer <= attackRange)
+            // Player is within aggro range, track the player
+            if (timePassed >= attackCD)
             {
-                if (healthSlider.value <= healthSlider.minValue)
+                if (distanceToPlayer <= attackRange)
                 {
-                    Die();
-                }
-                else
-                {
-                    animator.SetTrigger("attack");
-                    timePassed = 0;
-                    isAttacking = true;
-                    if (attackSound != null)
+                    if (healthSlider.value <= healthSlider.minValue)
+                    {
+                        Die();
+                    }
+                    else
+                    {
+                        animator.SetTrigger("attack");
+                        timePassed = 0;
+
+                        if (isAttacking == false)
+                        {
+                            Invoke("Attack", 1); // waits 1 second to call Attack() since that's when the swing would make contact.
+                        }
+
+                        isAttacking = true;
+
+
+                        if (attackSound != null)
                         {
                             audioSource.PlayOneShot(attackSound);
                         }
+
+                        Invoke("AttackCompleted", 3); // resets the isAttacking so it can attack again.
+                    }
                 }
             }
+
+            timePassed += Time.deltaTime;
+
+            if (newDestinationCD <= 0)
+            {
+                newDestinationCD = 0.5f;
+                agent.SetDestination(player.transform.position);
+            }
+
+            newDestinationCD -= Time.deltaTime;
+            transform.LookAt(player.transform);
         }
-
-        timePassed += Time.deltaTime;
-
-        if (newDestinationCD <= 0)
+        else
         {
-            newDestinationCD = 0.5f;
-            agent.SetDestination(player.transform.position);
+            // Player is outside aggro range, stop tracking the player
+            agent.ResetPath();
+            animator.SetFloat("speed", 0f); // Stop the enemy's movement animation
         }
+    }
 
-        newDestinationCD -= Time.deltaTime;
-        transform.LookAt(player.transform);
-    }
-    else
+    public void Attack()
     {
-        // Player is outside aggro range, stop tracking the player
-        agent.ResetPath();
-        animator.SetFloat("speed", 0f); // Stop the enemy's movement animation
+        Debug.Log("attempted attack");
+        if (Vector3.Distance(player.transform.position, transform.position) <= 2)
+        {
+            player.GetComponent<CombatVersionOne>().TakeDamage(5);
+        }
     }
-}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -118,50 +137,50 @@ AudioSource audioSource;
         if (collision.gameObject.CompareTag("Rock"))
         {
             TakeDamage(collision.transform.GetComponent<ThrownRock>().damage);
-            Destroy(collision.gameObject);
+            collision.transform.GetComponent<ThrownRock>().Break();
         }
     }
 
-void Die()
-{
-    if (isAttacking)
+    void Die()
     {
-        // Interrupt the attack animation
-        animator.SetTrigger("interruptAttack");
-    }
+        if (isAttacking)
+        {
+            // Interrupt the attack animation
+            animator.SetTrigger("interruptAttack");
+        }
 
-    Debug.Log("Die() method called. Triggering death animation...");
-    animator.SetTrigger("death");
+        Debug.Log("Die() method called. Triggering death animation...");
+        animator.SetTrigger("death");
 
-    if (deathSound != null)
+        if (deathSound != null)
         {
             audioSource.PlayOneShot(deathSound);
         }
-    
-    StartCoroutine(ExplodeAfterAnimation(2.0f)); // Adjust the time delay for explosion as needed
-}
 
-IEnumerator ExplodeAfterAnimation(float delay)
-{
-    float deathAnimationLength = GetAnimationLength("death");
-    Debug.Log("Death animation length: " + deathAnimationLength);
-
-    // Wait for the death animation
-    yield return new WaitForSeconds(deathAnimationLength);
-
-    // Instantiate vfx explosion after death animation finishes
-    if (explosion)
-    {
-        GameObject exploder = ((Transform)Instantiate(explosion, this.transform.position, this.transform.rotation)).gameObject;
-        Destroy(exploder, 0.1f); // Play for 1-2 frames
+        StartCoroutine(ExplodeAfterAnimation(2.0f)); // Adjust the time delay for explosion as needed
     }
 
-    // Destroy the enemy after a short delay
-    yield return new WaitForSeconds(delay);
+    IEnumerator ExplodeAfterAnimation(float delay)
+    {
+        float deathAnimationLength = GetAnimationLength("death");
+        Debug.Log("Death animation length: " + deathAnimationLength);
 
-    Debug.Log("Destroying GameObject after death animation and explosion.");
-    Destroy(gameObject);
-}
+        // Wait for the death animation
+        yield return new WaitForSeconds(deathAnimationLength);
+
+        // Instantiate vfx explosion after death animation finishes
+        if (explosion)
+        {
+            GameObject exploder = ((Transform)Instantiate(explosion, this.transform.position, this.transform.rotation)).gameObject;
+            Destroy(exploder, 0.1f); // Play for 1-2 frames
+        }
+
+        // Destroy the enemy after a short delay
+        yield return new WaitForSeconds(delay);
+
+        Debug.Log("Destroying GameObject after death animation and explosion.");
+        Destroy(gameObject);
+    }
 
 
 

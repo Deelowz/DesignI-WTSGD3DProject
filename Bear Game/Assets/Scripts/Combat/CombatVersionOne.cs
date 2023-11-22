@@ -102,6 +102,8 @@ public class CombatVersionOne : MonoBehaviour
                             GetComponent<Animator>().Play("horizontal attack");
                         }
 
+
+
                         isSwinging = true; // Sets isSwinging to true so the player cannot attack until the animation is over.
                                            //sword[swordIndex].GetComponent<Animator>().Play("Swing"); // Plays the animation of the selected sword regardless of if it can hit something.
                                            //sword[swordIndex].GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f); // Changes the pitch of the sound slightly to add variety.
