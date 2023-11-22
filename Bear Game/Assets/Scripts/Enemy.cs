@@ -15,12 +15,12 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] int health = 15;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] GameObject ragdoll;
+    //[SerializeField] GameObject ragdoll;
 
     [Header("Combat")]
     [SerializeField] float attackCD = 3f;
     [SerializeField] float attackRange = 1f;
-    [SerializeField] float aggroRange = 4f;
+    [SerializeField] float aggroRange = 5f;
 
     GameObject player;
     NavMeshAgent agent;
@@ -28,6 +28,11 @@ public class Enemy : MonoBehaviour
     float timePassed;
     float newDestinationCD = 0.5f;
     bool isAttacking;
+
+AudioSource audioSource;
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] AudioClip damageSound;
+    [SerializeField] AudioClip deathSound;
 
     void Start()
     {
@@ -38,6 +43,8 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -55,9 +62,14 @@ public class Enemy : MonoBehaviour
             return;
         }
 
+        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+    
+    if (distanceToPlayer <= aggroRange)
+    {
+        // Player is within aggro range, track the player
         if (timePassed >= attackCD)
         {
-            if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
+            if (distanceToPlayer <= attackRange)
             {
                 if (healthSlider.value <= healthSlider.minValue)
                 {
@@ -68,13 +80,17 @@ public class Enemy : MonoBehaviour
                     animator.SetTrigger("attack");
                     timePassed = 0;
                     isAttacking = true;
+                    if (attackSound != null)
+                        {
+                            audioSource.PlayOneShot(attackSound);
+                        }
                 }
             }
         }
 
         timePassed += Time.deltaTime;
 
-        if (newDestinationCD <= 0 && Vector3.Distance(player.transform.position, transform.position) <= aggroRange)
+        if (newDestinationCD <= 0)
         {
             newDestinationCD = 0.5f;
             agent.SetDestination(player.transform.position);
@@ -83,6 +99,13 @@ public class Enemy : MonoBehaviour
         newDestinationCD -= Time.deltaTime;
         transform.LookAt(player.transform);
     }
+    else
+    {
+        // Player is outside aggro range, stop tracking the player
+        agent.ResetPath();
+        animator.SetFloat("speed", 0f); // Stop the enemy's movement animation
+    }
+}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -109,6 +132,12 @@ void Die()
 
     Debug.Log("Die() method called. Triggering death animation...");
     animator.SetTrigger("death");
+
+    if (deathSound != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
+    
     StartCoroutine(ExplodeAfterAnimation(2.0f)); // Adjust the time delay for explosion as needed
 }
 
@@ -141,6 +170,11 @@ IEnumerator ExplodeAfterAnimation(float delay)
         healthSlider.value -= damageAmount;
         healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
         animator.SetTrigger("damage");
+
+        if (damageSound != null)
+        {
+            audioSource.PlayOneShot(damageSound);
+        }
 
         if (healthSlider.value <= healthSlider.minValue)
         {

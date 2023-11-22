@@ -3,7 +3,11 @@ guid: 8eeedfa50183a99449d3a88c8c5fd608
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hitVFX: {instanceID: 0}
+  - ragdoll: {instanceID: 0}
+  - damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
+  - audioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

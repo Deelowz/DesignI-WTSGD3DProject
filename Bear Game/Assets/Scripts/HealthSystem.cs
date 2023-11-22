@@ -7,6 +7,9 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] float health = 100;
     [SerializeField] GameObject hitVFX;
     [SerializeField] GameObject ragdoll;
+
+    [SerializeField] AudioClip damageSound;
+    [SerializeField] AudioSource audioSource;
  
     Animator animator;
     void Start()
@@ -17,8 +20,15 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
+
+        // Play damage sound
+        if (audioSource && damageSound)
+        {
+            audioSource.PlayOneShot(damageSound);
+        }
+
         animator.SetTrigger("damage");
- 
+
         if (health <= 0)
         {
             Die();

@@ -28,7 +28,7 @@ public class AnimationStateController : MonoBehaviour
         float inputMagnitude = new Vector2(horizontal, vertical).magnitude;
 
         // Update the Animator parameters
-        animator.SetFloat("Speed", inputMagnitude);
+        animator.SetFloat("speed", inputMagnitude);
         animator.SetBool("isWalking", inputMagnitude >= 0.1f);
         animator.SetBool("isIdle", inputMagnitude < 0.1f);
         animator.SetBool("isDashing", playerMovement.IsDashing());
