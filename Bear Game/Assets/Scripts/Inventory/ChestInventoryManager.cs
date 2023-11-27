@@ -17,6 +17,8 @@ public class ChestInventoryManager : MonoBehaviour
     public Item emptySlot;
     public int currentSlotNumber;
 
+    public GameObject currentChest;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,14 +42,24 @@ public class ChestInventoryManager : MonoBehaviour
 
     public void CloseInventory()
     {
+        if(currentChest != null)
+        {
+            currentChest.transform.GetComponent<Animator>().Play("CloseChest");
+            Invoke("ParticlesStop", 0.7f);
+        }
         transform.localPosition = new Vector2(0, 1000); // Moves chest panel away.
         inventoryPanel.transform.localPosition = new Vector2(298.85f, 74); // Moves inventory panel back to main inventory panel, which is moved into view.
         chestOpen = false; // Moves inventory panel away.
     }
 
+    public void ParticlesStop()
+    {
+        currentChest.transform.GetChild(2).gameObject.SetActive(false);
+    }
+
     public void MoveInventory()
     {
-        inventoryPanel.transform.localPosition = new Vector2(298.85f, - 981);
+        inventoryPanel.transform.localPosition = new Vector2(298.85f, - 1150);
     }
 
     public void UpdateSlots()

@@ -166,6 +166,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Spike"))
+        {
+            TakeDamage(5);
+        }
+    }
+
     private void OnMouseDown() // CLICKING THE BEAR TO ATTACK
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= attackRange) // CHECKS IF PLAYER IS CLOSE ENOUGH

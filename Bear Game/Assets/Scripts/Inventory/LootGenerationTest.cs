@@ -34,7 +34,9 @@ public class LootGenerationTest : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject()) // Checks to make sure the player doesn't click through UI 
         {
-            OpenChest();
+            chestInventoryScript.currentChest = transform.gameObject;
+            transform.GetComponent<Animator>().Play("ChestAnimation");
+            transform.GetChild(2).gameObject.SetActive(true);
         }
     }
 
