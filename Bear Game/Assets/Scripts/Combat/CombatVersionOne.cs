@@ -4,6 +4,7 @@ using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CombatVersionOne : MonoBehaviour
@@ -31,6 +32,9 @@ public class CombatVersionOne : MonoBehaviour
     [SerializeField] AudioClip attackSound;
     [SerializeField] AudioClip damageSound;
     [SerializeField] AudioClip deathSound;
+    [SerializeField] GameObject hitVFX;
+    [SerializeField] GameObject ragdoll;
+
 
     //------------------Rock Throw Things---------------------------
     [SerializeField] private LayerMask groundMask;
@@ -53,6 +57,7 @@ public class CombatVersionOne : MonoBehaviour
     public float throwUpwardForce;
 
     public bool readyToThrow;
+    public Animator animator;
 
     //--------------------------------------------------------------
 
@@ -135,6 +140,7 @@ public class CombatVersionOne : MonoBehaviour
             {
 
             }
+
         }
 
 
@@ -155,10 +161,67 @@ public class CombatVersionOne : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        // health -= damage;
+        //health -= damage;
         //healthSlider.value = health;
         healthSlider.value -= (damage-armor);
         healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+        // Play damage sound
+        if (audioSource && damageSound)
+        {
+            audioSource.PlayOneShot(damageSound);
+        }
+
+        animator.SetTrigger("damage");
+
+        if (damageSound != null)
+        {
+            audioSource.PlayOneShot(damageSound);
+        }
+
+        if (healthSlider.value <= healthSlider.minValue)
+        {
+            Die();
+            RestartLevel();
+        }
+    }
+
+    void Die()
+    {
+        animator.SetTrigger("death");
+
+        if (deathSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
+        float deathAnimationLength = GetAnimationLength("death");
+        Invoke(nameof(RestartLevel), deathAnimationLength);
+    }
+
+    void RestartLevel()
+    {
+        // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    float GetAnimationLength(string animationName)
+    {
+        AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(0);
+        foreach (AnimatorClipInfo info in clipInfo)
+        {
+            if (info.clip.name == animationName)
+            {
+                return info.clip.length;
+            }
+        }
+
+        return 0f;
+    }
+
+    public void HitVFX(Vector3 hitPosition)
+    {
+        GameObject hit = Instantiate(hitVFX, hitPosition, Quaternion.identity);
+        Destroy(hit, 3f);
+
     }
 
     public void HealthBoost(int boost)

@@ -10,7 +10,7 @@ public class EnemyCombat : MonoBehaviour
     Enemy enemy;
  
     [SerializeField] float weaponLength;
-    [SerializeField] float weaponDamage;
+    [SerializeField] int weaponDamage;
     void Start()
     {
         canDealDamage = false;
@@ -29,7 +29,7 @@ public class EnemyCombat : MonoBehaviour
             int layerMask = 1 << 8;
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
-                if (hit.transform.TryGetComponent(out HealthSystem health))
+                if (hit.transform.TryGetComponent(out CombatVersionOne health))
                 {
                     health.TakeDamage(weaponDamage);
                     health.HitVFX(hit.point);

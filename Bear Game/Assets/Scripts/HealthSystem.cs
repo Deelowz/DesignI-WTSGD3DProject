@@ -1,85 +1,85 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine;
- 
-public class HealthSystem : MonoBehaviour
-{
-    [SerializeField] float health = 100;
-    [SerializeField] GameObject hitVFX;
-    [SerializeField] GameObject ragdoll;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine.SceneManagement;
+//using UnityEngine;
 
-    [SerializeField] AudioClip damageSound;
-    [SerializeField] AudioClip deathSound;
-    [SerializeField] AudioSource audioSource;
- 
-    Animator animator;
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
- 
-    public void TakeDamage(float damageAmount)
-    {
-        health -= damageAmount;
+//public class HealthSystem : MonoBehaviour
+//{
+//    [SerializeField] float health = 100;
+//    [SerializeField] GameObject hitVFX;
+//    [SerializeField] GameObject ragdoll;
 
-        Debug.Log("Health: " + health);
+//    [SerializeField] AudioClip damageSound;
+//    [SerializeField] AudioClip deathSound;
+//    [SerializeField] AudioSource audioSource;
 
-        // Play damage sound
-        if (audioSource && damageSound)
-        {
-            audioSource.PlayOneShot(damageSound);
-        }
+//    Animator animator;
+//    void Start()
+//    {
+//        animator = GetComponent<Animator>();
+//    }
 
-        animator.SetTrigger("damage");
-        
-        if (damageSound != null)
-        {
-            audioSource.PlayOneShot(damageSound);
-        }
+//    public void TakeDamage(float damageAmount)
+//    {
+//        health -= damageAmount;
 
-        if (health <= 0)
-        {
-            Die();
-            RestartLevel();
-        }
-    }
- 
-    void Die()
-    {
-        animator.SetTrigger("death");
-        
-        if (deathSound != null && audioSource !=null)
-        {
-            audioSource.PlayOneShot(deathSound);
-        }
-        float deathAnimationLength = GetAnimationLength("death");
-        Invoke(nameof(RestartLevel), deathAnimationLength);
-    }
+//        Debug.Log("Health: " + health);
 
-    void RestartLevel()
-    {
-        // Reload the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+//        // Play damage sound
+//        if (audioSource && damageSound)
+//        {
+//            audioSource.PlayOneShot(damageSound);
+//        }
 
-    float GetAnimationLength(string animationName)
-    {
-        AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(0);
-        foreach (AnimatorClipInfo info in clipInfo)
-        {
-            if (info.clip.name == animationName)
-            {
-                return info.clip.length;
-            }
-        }
+//        animator.SetTrigger("damage");
 
-        return 0f; 
-    }
-    public void HitVFX(Vector3 hitPosition)
-    {
-        GameObject hit = Instantiate(hitVFX, hitPosition, Quaternion.identity);
-        Destroy(hit, 3f);
- 
-    }
-}
+//        if (damageSound != null)
+//        {
+//            audioSource.PlayOneShot(damageSound);
+//        }
+
+//        if (health <= 0)
+//        {
+//            Die();
+//            RestartLevel();
+//        }
+//    }
+
+//    void Die()
+//    {
+//        animator.SetTrigger("death");
+
+//        if (deathSound != null && audioSource != null)
+//        {
+//            audioSource.PlayOneShot(deathSound);
+//        }
+//        float deathAnimationLength = GetAnimationLength("death");
+//        Invoke(nameof(RestartLevel), deathAnimationLength);
+//    }
+
+//    void RestartLevel()
+//    {
+//        // Reload the current scene
+//        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+//    }
+
+//    float GetAnimationLength(string animationName)
+//    {
+//        AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(0);
+//        foreach (AnimatorClipInfo info in clipInfo)
+//        {
+//            if (info.clip.name == animationName)
+//            {
+//                return info.clip.length;
+//            }
+//        }
+
+//        return 0f;
+//    }
+//    public void HitVFX(Vector3 hitPosition)
+//    {
+//        GameObject hit = Instantiate(hitVFX, hitPosition, Quaternion.identity);
+//        Destroy(hit, 3f);
+
+//    }
+//}

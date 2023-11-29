@@ -752,6 +752,8 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 46e9c8411e63b99458b2f913fe3661e7, type: 3}
   damageSound: {fileID: 8300000, guid: ba441aaeaadae7a41be8383e02587af3, type: 3}
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
+  hitVFX: {fileID: 0}
+  ragdoll: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -770,6 +772,7 @@ MonoBehaviour:
   throwForce: 15
   throwUpwardForce: 0
   readyToThrow: 0
+  animator: {fileID: 5866666020797919375}
 --- !u!114 &18813827
 MonoBehaviour:
   m_ObjectHideFlags: 0
