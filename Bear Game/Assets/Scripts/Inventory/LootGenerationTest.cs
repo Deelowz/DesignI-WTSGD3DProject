@@ -62,25 +62,28 @@ public class LootGenerationTest : MonoBehaviour
     {
         for (int i = 0; i < chestSlots; i++)
         {
-            char tier = RandomSpawnTier();
-
-            switch (tier)
+            if (chestInventory[i] == null)
             {
-                case 'r':
-                    chestInventory[i] = rareItem[Random.Range(0, rareItem.Length)];
-                    break;
-                case 'u':
-                    chestInventory[i] = uncommonItem[Random.Range(0, uncommonItem.Length)];
-                    break;
-                case 'c':
-                    chestInventory[i] = commonItem[Random.Range(0, commonItem.Length)];
-                    break;
-                case 'e':
-                    chestInventory[i] = emptySlot;
-                    break;
-                default:
-                    //Debug.Log("Something went wrong with chest randomization.");
-                    break;
+                char tier = RandomSpawnTier();
+
+                switch (tier)
+                {
+                    case 'r':
+                        chestInventory[i] = rareItem[Random.Range(0, rareItem.Length)];
+                        break;
+                    case 'u':
+                        chestInventory[i] = uncommonItem[Random.Range(0, uncommonItem.Length)];
+                        break;
+                    case 'c':
+                        chestInventory[i] = commonItem[Random.Range(0, commonItem.Length)];
+                        break;
+                    case 'e':
+                        chestInventory[i] = emptySlot;
+                        break;
+                    default:
+                        //Debug.Log("Something went wrong with chest randomization.");
+                        break;
+                }
             }
         }
     }
