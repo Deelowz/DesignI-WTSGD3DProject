@@ -102,30 +102,8 @@ public class CombatVersionOne : MonoBehaviour
                 {
                     if (!isSwinging && !isRecoiling) // Makes sure the player isn't in the middle of attacking or getting hit.
                     {
-                        if (swordSlot.Item.id == 21) // The sword is the Blue Marlin Sabre
-                        {
-                            swordIndex = 0;
-                        }
-                        else if (swordSlot.Item.id == 22) // The sword is the Eel Sword
-                        {
-                            swordIndex = 1;
-                        }
-                        else if (swordSlot.Item.id == 23) // The sword is Chloe's Sword
-                        {
-                            swordIndex = 2;
-                        }
-                        else // No sword equipped
-                        {
-                            swordIndex = 3;
-                            GetComponent<Animator>().Play("horizontal attack");
-                        }
-
-
-
-                        isSwinging = true; // Sets isSwinging to true so the player cannot attack until the animation is over.
-                                           //sword[swordIndex].GetComponent<Animator>().Play("Swing"); // Plays the animation of the selected sword regardless of if it can hit something.
-                                           //sword[swordIndex].GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f); // Changes the pitch of the sound slightly to add variety.
-                                           //sword[swordIndex].GetComponent<AudioSource>().Play(); // Plays the sword's swing sound effect.
+                        GetComponent<Animator>().Play("horizontal attack");
+                        isSwinging = true;
 
                         Invoke(nameof(ResetSwordSwing), swingCooldown);
 

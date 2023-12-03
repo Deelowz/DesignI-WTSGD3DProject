@@ -11,6 +11,10 @@ TagManager:
   - Spike
   - Interactable
   - Inventory
+  - BearClaw
+  - BlueMarlin
+  - EelSword
+  - OtherSword
   layers:
   - Default
   - TransparentFX

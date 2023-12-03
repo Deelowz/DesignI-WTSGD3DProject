@@ -12,6 +12,7 @@ public class InventoryManagerTwo : MonoBehaviour
     public bool[] equippedSlotFilled;
     public GameObject[] equippedSlot;
 
+    public GameObject[] swordHitbox;
 
     public TMP_Text itemName;
     public TMP_Text itemDescription;
@@ -299,6 +300,42 @@ public class InventoryManagerTwo : MonoBehaviour
             }
         }
 
+        if (equippedSlot[2].GetComponent<ItemController>().Item.id == 21) // CHECKS WHICH SWORD IS EQUIPPED
+        {
+            swordHitbox[0].SetActive(false);
+            swordHitbox[1].SetActive(true);
+            swordHitbox[2].SetActive(false);
+            swordHitbox[3].SetActive(false);
+
+            combatVersionOne.swingCooldown = 2.5f;
+        }
+        else if (equippedSlot[2].GetComponent<ItemController>().Item.id == 22)
+        {
+            swordHitbox[0].SetActive(false);
+            swordHitbox[1].SetActive(false);
+            swordHitbox[2].SetActive(true);
+            swordHitbox[3].SetActive(false);
+
+            combatVersionOne.swingCooldown = 1.5f;
+        }
+        else if (equippedSlot[2].GetComponent<ItemController>().Item.id == 23)
+        {
+            swordHitbox[0].SetActive(false);
+            swordHitbox[1].SetActive(false);
+            swordHitbox[2].SetActive(false);
+            swordHitbox[3].SetActive(true);
+
+            combatVersionOne.swingCooldown = 4f;
+        }
+        else
+        {
+            swordHitbox[0].SetActive(true);
+            swordHitbox[1].SetActive(false);
+            swordHitbox[2].SetActive(false);
+            swordHitbox[3].SetActive(false);
+
+            combatVersionOne.swingCooldown = 2.5f;
+        }
 
         // Important, sets the buttons back to active.
         dropButton.SetActive(true);

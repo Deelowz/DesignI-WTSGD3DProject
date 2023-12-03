@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float attackRange = 1f;
     [SerializeField] float aggroRange = 5f;
 
+    public float damageTimer = 2;
+
     GameObject player;
     NavMeshAgent agent;
     Animator animator;
@@ -141,6 +143,11 @@ public class Enemy : MonoBehaviour
             aggroRange = 0;
             attackRange = 0;
         }
+
+        if (damageTimer > 0)
+        {
+            damageTimer -= Time.deltaTime;
+        }
     }
 
     public void Attack()
@@ -173,18 +180,24 @@ public class Enemy : MonoBehaviour
         {
             TakeDamage(5);
         }
-    }
-
-    private void OnMouseDown() // CLICKING THE BEAR TO ATTACK
-    {
-        if (Vector3.Distance(player.transform.position, transform.position) <= attackRange) // CHECKS IF PLAYER IS CLOSE ENOUGH
+        else if (other.transform.tag == "BearClaw")
         {
-            if (!player.GetComponent<CombatVersionOne>().isSwinging) // CHECKS IF HE IS ALREADY SWINGING
-            {
-                Invoke("MeleeAttack", 0.5f);
-            }
+            TakeDamage(5);
+        }
+        else if (other.transform.tag == "BlueMarlin")
+        {
+            TakeDamage(10);
+        }
+        else if (other.transform.tag == "EelSword")
+        {
+            TakeDamage(7);
+        }
+        else if (other.transform.tag == "OtherSword")
+        {
+            TakeDamage(12);
         }
     }
+
 
     void Die()
     {
@@ -231,37 +244,34 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void MeleeAttack()
-    {
-        if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
-        {
-            TakeDamage(5); // change this value to change melee damage.
-        }
-    }
-
     public void TakeDamage(int damageAmount)
     {
-        healthSlider.value -= damageAmount;
-        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
-
-
-
-        if (damageSound != null)
+        if (damageTimer > 0)
         {
-            audioSource.PlayOneShot(damageSound);
-        }
 
-        if (healthSlider.value <= healthSlider.minValue)
-        {
-            Die();
-            isDead = true;
         }
         else
         {
-            animator.SetTrigger("damage");
+            healthSlider.value -= damageAmount;
+            healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+
+            damageTimer = 1;
+
+            if (damageSound != null)
+            {
+                audioSource.PlayOneShot(damageSound);
+            }
+
+            if (healthSlider.value <= healthSlider.minValue)
+            {
+                Die();
+                isDead = true;
+            }
+            else
+            {
+                animator.SetTrigger("damage");
+            }
         }
-
-
     }
 
     public void StartDealDamage()
