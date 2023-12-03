@@ -34,6 +34,8 @@ public class InventoryManagerTwo : MonoBehaviour
 
     public bool inventoryOpen = false;
 
+    public MagicDoor magicDoor;
+
 
     void Start()
     {
@@ -302,6 +304,37 @@ public class InventoryManagerTwo : MonoBehaviour
         dropButton.SetActive(true);
         interactButton.transform.parent.gameObject.SetActive(true);
 
+    }
+
+
+    public void GemDoorCheck() // checks for gemstones
+    {
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            if (inventorySlot[i].GetComponent<ItemController>().Item.type == 6 && inventorySlot[i].GetComponent<ItemController>().Item.name != "Key")
+            {
+                selectedButton = inventorySlot[i];
+                magicDoor.RevealGem(inventorySlot[i].GetComponent<ItemController>().Item.name);
+                DropItem();
+
+                return;
+            }
+        }
+    }
+
+    public bool CheckKey() // checks fora key and whatnot
+    {
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            if (inventorySlot[i].GetComponent<ItemController>().Item.type == 6 && inventorySlot[i].GetComponent<ItemController>().Item.name == "Key")
+            {
+                selectedButton = inventorySlot[i];
+                DropItem();
+                return true;
+            }
+        }
+
+        return false;
     }
 
 

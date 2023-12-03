@@ -13,8 +13,15 @@ public class ElementalBlock : MonoBehaviour
         {
             if (collision.transform.GetComponent<ThrownRock>().effect == weakness) // checks if it matches this wall's weakness
             {
-                Destroy(gameObject); // destroys the wall if it does
+                transform.parent.transform.GetChild(0).gameObject.SetActive(true);
+                Invoke("DestroyRoot", 5);
+                
             }
         }
+    }
+
+    public void DestroyRoot()
+    {
+        Destroy(transform.parent.gameObject); // destroys the wall if it does
     }
 }
