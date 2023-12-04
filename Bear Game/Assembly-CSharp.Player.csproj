@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Combat\ThrownRock.cs" />
     <Compile Include="Assets\Scripts\Menu Manager.cs" />
     <Compile Include="Assets\Scripts\Inventory\ChestInventoryManager.cs" />
+    <Compile Include="Assets\CutsceneOneScript.cs" />
     <Compile Include="Assets\Scripts\Combat\CombatVersionOne.cs" />
     <Compile Include="Assets\Scripts\GeederArm.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />

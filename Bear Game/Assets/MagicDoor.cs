@@ -7,10 +7,15 @@ public class MagicDoor : MonoBehaviour
     // Start is called before the first frame update
 
     public InventoryManagerTwo inventoryManagerTwo;
+    public ParticleSystem particles;
 
     public bool emerald = false;
     public bool ruby = false;
     public bool sapphire = false;
+
+    public Camera mainCamera;
+    public Camera cutSceneCamera;
+    public Animator fadeScreen;
 
     private void OnMouseDown()
     {
@@ -37,7 +42,16 @@ public class MagicDoor : MonoBehaviour
 
         if (emerald == true && ruby == true && sapphire == true)
         {
-            //PLAY CUTSCENE
+            fadeScreen.Play("ScreenFadeUnfade");
+            Invoke("CameraFade", 2);
         }
     }
+
+    public void CameraFade()
+    {
+        mainCamera.gameObject.SetActive(false);
+        cutSceneCamera.gameObject.SetActive(true);
+        cutSceneCamera.gameObject.GetComponent<Animator>().Play("Cutscene1Camera");
+    }
+
 }
