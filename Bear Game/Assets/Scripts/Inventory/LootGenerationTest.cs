@@ -17,6 +17,8 @@ public class LootGenerationTest : MonoBehaviour
     public ChestInventoryManager chestInventoryScript;
     public InventoryManagerTwo inventoryManagerTwo;
 
+     public AudioSource chestOpenSound;
+     public AudioClip chestOpenClip;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +57,13 @@ public class LootGenerationTest : MonoBehaviour
         chestInventoryScript.lootGenerationTest = this; // Sends it this specific instance of the script.
         chestInventoryScript.UpdateSlots();
         chestInventoryScript.MoveInventory();
+
+        if (chestOpenSound != null && chestOpenClip != null)
+        {
+            chestOpenSound.PlayOneShot(chestOpenClip);
+        }
     }
+
 
 
     public void FillChest()

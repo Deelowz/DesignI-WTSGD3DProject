@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0445c90e1893ae46aa3163c8d0da7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  trap: {fileID: 8300000, guid: c184873bd9437e743828a32429198836, type: 3}
 --- !u!95 &5532882725284599558
 Animator:
   serializedVersion: 5

@@ -1,22 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    // Healthbar things
-    public UnityEngine.UI.Slider healthSlider;
+    public Slider healthSlider;
     public TMP_Text healthText;
-
-    // When the enemy dies, we play an explosion
     public Transform explosion;
 
     [SerializeField] int health = 15;
     [SerializeField] GameObject hitVFX;
-    //[SerializeField] GameObject ragdoll;
 
     [Header("Combat")]
     [SerializeField] float attackCD = 3f;
@@ -29,15 +25,16 @@ public class Enemy : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
     float timePassed;
-    float newDestinationCD = 0.5f;
+    float newDestinationCD = 2.5f;
     bool isAttacking;
-
     public bool isDead = false;
 
     AudioSource audioSource;
     [SerializeField] AudioClip attackSound;
     [SerializeField] AudioClip damageSound;
     [SerializeField] AudioClip deathSound;
+    [SerializeField] string idleTrigger = "idleTrigger"; 
+
 
     void Start()
     {
@@ -52,44 +49,36 @@ public class Enemy : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            // If AudioSource is not found, create one and attach it
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        audioSource.volume = 0.2f; // Change this to the desired volume for sounds
+        audioSource.volume = 0.2f;
     }
 
     void Update()
     {
         if (!isDead)
         {
-
-
             if (agent == null || player == null)
             {
                 Debug.LogError("Agent or player is null.");
                 return;
             }
 
-            animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-
             if (player == null)
-            {
                 return;
-            }
 
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
 
             if (distanceToPlayer <= aggroRange)
             {
-                // Player is within aggro range, track the player
                 if (timePassed >= attackCD)
                 {
                     if (distanceToPlayer <= attackRange)
                     {
                         if (healthSlider.value <= healthSlider.minValue)
                         {
-                            if (isDead == false) // Since Die(); is being called in update, it will be called a crap ton unless there's something that stops it after calling Die() once. Hence, this if-boolean statement.
+                            if (!isDead)
                             {
                                 Die();
                                 isDead = true;
@@ -100,20 +89,15 @@ public class Enemy : MonoBehaviour
                             animator.SetTrigger("attack");
                             timePassed = 0;
 
-                            if (isAttacking == false)
-                            {
-                                Invoke("Attack", 1); // waits 1 second to call Attack() since that's when the swing would make contact.
-                            }
+                            if (!isAttacking)
+                                Invoke("Attack", 1);
 
                             isAttacking = true;
 
-
                             if (attackSound != null)
-                            {
                                 audioSource.PlayOneShot(attackSound);
-                            }
 
-                            Invoke("AttackCompleted", 3); // resets the isAttacking so it can attack again.
+                            Invoke("AttackCompleted", 3);
                         }
                     }
                 }
@@ -129,11 +113,11 @@ public class Enemy : MonoBehaviour
                 newDestinationCD -= Time.deltaTime;
                 transform.LookAt(player.transform);
             }
+            
             else
             {
-                // Player is outside aggro range, stop tracking the player
                 agent.ResetPath();
-                animator.SetFloat("speed", 0f); // Stop the enemy's movement animation
+                animator.SetTrigger(idleTrigger);
             }
         }
         else
@@ -145,27 +129,20 @@ public class Enemy : MonoBehaviour
         }
 
         if (damageTimer > 0)
-        {
             damageTimer -= Time.deltaTime;
-        }
     }
 
     public void Attack()
     {
         Debug.Log("attempted attack");
         if (Vector3.Distance(player.transform.position, transform.position) <= 2)
-        {
             player.GetComponent<CombatVersionOne>().TakeDamage(5);
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
-            print(true);
             player = collision.gameObject;
-        }
 
         if (collision.gameObject.CompareTag("Rock"))
         {
@@ -176,137 +153,80 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Spike")
+        switch (other.transform.tag)
         {
-            TakeDamage(5);
-        }
-        else if (other.transform.tag == "BearClaw")
-        {
-            TakeDamage(5);
-        }
-        else if (other.transform.tag == "BlueMarlin")
-        {
-            TakeDamage(10);
-        }
-        else if (other.transform.tag == "EelSword")
-        {
-            TakeDamage(7);
-        }
-        else if (other.transform.tag == "OtherSword")
-        {
-            TakeDamage(12);
+            case "Spike":
+            case "BearClaw":
+                TakeDamage(5);
+                break;
+            case "BlueMarlin":
+                TakeDamage(10);
+                break;
+            case "EelSword":
+                TakeDamage(7);
+                break;
+            case "OtherSword":
+                TakeDamage(12);
+                break;
         }
     }
-
 
     void Die()
     {
         animator.Play("death");
 
         if (isAttacking)
-        {
-            // Interrupt the attack animation
             animator.SetTrigger("interruptAttack");
-        }
-
-        Debug.Log("Die() method called. Triggering death animation...");
-
-
-        //animator.Play("death");
 
         if (deathSound != null && audioSource != null)
-        {
             audioSource.PlayOneShot(deathSound);
-        }
 
-        StartCoroutine(ExplodeAfterAnimation(2.0f)); // Adjust the time delay for explosion as needed
+        StartCoroutine(ExplodeAfterAnimation(0.5f));
     }
 
     IEnumerator ExplodeAfterAnimation(float delay)
     {
         float deathAnimationLength = GetAnimationLength("death");
-        Debug.Log("Death animation length: " + deathAnimationLength);
 
-        // Wait for the death animation
         yield return new WaitForSeconds(deathAnimationLength);
 
-        // Instantiate vfx explosion after death animation finishes
         if (explosion)
         {
-            GameObject exploder = ((Transform)Instantiate(explosion, this.transform.position, this.transform.rotation)).gameObject;
-            Destroy(exploder, 0.1f); // Play for 1-2 frames
+            GameObject exploder = ((Transform)Instantiate(explosion, transform.position, transform.rotation)).gameObject;
+            Destroy(exploder, 0.1f);
         }
 
-        // Destroy the enemy after a short delay
-        //yield return new WaitForSeconds(delay);
-
-        Debug.Log("Destroying GameObject after death animation and explosion.");
         Destroy(gameObject);
     }
 
     public void TakeDamage(int damageAmount)
     {
         if (damageTimer > 0)
-        {
+            return;
 
+        healthSlider.value -= damageAmount;
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
+        damageTimer = 1;
+
+        if (damageSound != null)
+            audioSource.PlayOneShot(damageSound);
+
+        if (healthSlider.value <= healthSlider.minValue)
+        {
+            Die();
+            isDead = true;
         }
         else
         {
-            healthSlider.value -= damageAmount;
-            healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
-
-            damageTimer = 1;
-
-            if (damageSound != null)
-            {
-                audioSource.PlayOneShot(damageSound);
-            }
-
-            if (healthSlider.value <= healthSlider.minValue)
-            {
-                Die();
-                isDead = true;
-            }
-            else
-            {
-                animator.SetTrigger("damage");
-            }
+            animator.SetTrigger("damage");
         }
     }
 
-    public void StartDealDamage()
+    public void AttackCompleted()
     {
-        GetComponentInChildren<EnemyCombat>().StartDealDamage();
-    }
-
-    public void EndDealDamage()
-    {
-        GetComponentInChildren<EnemyCombat>().EndDealDamage();
-    }
-
-    public void HitVFX(Vector3 hitPosition)
-    {
-        GameObject hit = Instantiate(hitVFX, hitPosition, Quaternion.identity);
-        Destroy(hit, 3f);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, aggroRange);
-    }
-
-    IEnumerator DestroyAfterAnimation(float delay)
-    {
-        float deathAnimationLength = GetAnimationLength("death");
-        Debug.Log("Death animation length: " + deathAnimationLength);
-
-        yield return new WaitForSeconds(Mathf.Max(deathAnimationLength, delay));
-
-        Debug.Log("Destroying GameObject after death animation.");
-        Destroy(gameObject);
+        if (healthSlider.value <= healthSlider.minValue && isAttacking)
+            Die();
+        isAttacking = false;
     }
 
     float GetAnimationLength(string animationName)
@@ -321,14 +241,5 @@ public class Enemy : MonoBehaviour
         }
 
         return 3.0f;
-    }
-
-    public void AttackCompleted()
-    {
-        if (healthSlider.value <= healthSlider.minValue && isAttacking)
-        {
-            Die();
-        }
-        isAttacking = false;
     }
 }

@@ -170,6 +170,7 @@ public class CombatVersionOne : MonoBehaviour
         if (deathSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(deathSound);
+            audioSource.volume = 0.5f;
         }
         float deathAnimationLength = GetAnimationLength("death");
         Invoke(nameof(RestartLevel), deathAnimationLength);
