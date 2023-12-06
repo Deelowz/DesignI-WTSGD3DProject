@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Inventory\RockReset.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+    <Compile Include="Assets\Scripts\CasterEnemy.cs" />
     <Compile Include="Assets\Scripts\Room.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Scripts\SpikeTrap.cs" />

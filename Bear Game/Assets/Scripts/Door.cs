@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventoryManagerTwo = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryManagerTwo>();
+        //inventoryManagerTwo = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryManagerTwo>();
     }
 
     // Update is called once per frame
