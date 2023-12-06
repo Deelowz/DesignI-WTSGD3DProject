@@ -44,6 +44,6 @@ public class CutsceneOneScript : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
 }
