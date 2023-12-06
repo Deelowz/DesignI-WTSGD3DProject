@@ -59648,7 +59648,7 @@ MonoBehaviour:
   - {fileID: 853091842}
   - {fileID: 1874651649}
   swordHitbox:
-  - {fileID: 1356881849}
+  - {fileID: }
   - {fileID: 6638596562115028958}
   - {fileID: 4552140066063501293}
   - {fileID: 1801715710}
