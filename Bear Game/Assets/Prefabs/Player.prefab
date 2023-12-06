@@ -1503,7 +1503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 640899475149482433}
-  - component: {fileID: 8785284649505183405}
+  - component: {fileID: 3930683589934163154}
   m_Layer: 0
   m_Name: TheBlueMarlin
   m_TagString: BlueMarlin
@@ -1528,8 +1528,8 @@ Transform:
   - {fileID: 5659542915151957690}
   m_Father: {fileID: 2535017684714209070}
   m_LocalEulerAnglesHint: {x: -65.211, y: -3.883, z: 85.021}
---- !u!64 &8785284649505183405
-MeshCollider:
+--- !u!65 &3930683589934163154
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1546,10 +1546,9 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.2543431, y: 7.0913787, z: 0.5608592}
+  m_Center: {x: -0.023781862, y: 4.7804284, z: 0.016561674}
 --- !u!1 &3839856817628889325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,7 +2812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7292063578439354809}
-  - component: {fileID: 7796508006450582107}
+  - component: {fileID: 8217077871084144645}
   m_Layer: 0
   m_Name: EelBlade
   m_TagString: EelSword
@@ -2837,8 +2836,8 @@ Transform:
   - {fileID: 6007422631328508119}
   m_Father: {fileID: 2535017684714209070}
   m_LocalEulerAnglesHint: {x: 20.667, y: -108.53, z: 0}
---- !u!64 &7796508006450582107
-MeshCollider:
+--- !u!65 &8217077871084144645
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2855,10 +2854,9 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.24019608, y: 0.52958065, z: 4.8198485}
+  m_Center: {x: -0.0048126597, y: -0.01126461, z: -1.9099332}
 --- !u!1 &8094982561973001915
 GameObject:
   m_ObjectHideFlags: 0

@@ -62,6 +62,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ea591f835095fad4a977eddacae22c0f, type: 2}
   - {fileID: 11400000, guid: c288b23b52d7e744283e80d8909cf7df, type: 2}
   - {fileID: 11400000, guid: 153982fee81eba1429c2244ee1c2c58b, type: 2}
+  - {fileID: 11400000, guid: 5edcac365fb0c6c41944e2610da4acd7, type: 2}
   emptySlot: {fileID: 11400000, guid: cae921930a50ad94ea143f1e3e7caa0e, type: 2}
   chestInventory:
   - {fileID: 0}
@@ -82,6 +83,8 @@ MonoBehaviour:
   chestSlots: 15
   chestInventoryScript: {fileID: 0}
   inventoryManagerTwo: {fileID: 0}
+  chestOpenSound: {fileID: 0}
+  chestOpenClip: {fileID: 0}
 --- !u!65 &2146411510195574377
 BoxCollider:
   m_ObjectHideFlags: 0

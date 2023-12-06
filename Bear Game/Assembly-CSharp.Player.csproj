@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory\RockReset.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\Scripts\VolumeManager.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Scripts\CasterEnemy.cs" />
     <Compile Include="Assets\Scripts\Room.cs" />
@@ -83,8 +84,8 @@
     <Compile Include="Assets\Scripts\AnimationStateController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyCombat.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Combat\ThrownRock.cs" />
-    <Compile Include="Assets\Scripts\Menu Manager.cs" />
     <Compile Include="Assets\Scripts\Inventory\ChestInventoryManager.cs" />
     <Compile Include="Assets\CutsceneOneScript.cs" />
     <Compile Include="Assets\Scripts\Combat\CombatVersionOne.cs" />

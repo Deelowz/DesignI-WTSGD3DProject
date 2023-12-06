@@ -194,14 +194,14 @@ public class CasterEnemy : MonoBehaviour
         GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
         Vector3 forceDirection = calculateRockVelocity(transform.position, player.transform.position);
 
-        projectile.GetComponent<Rigidbody>().AddForce(forceDirection, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(forceDirection + new Vector3(0, 1, 0), ForceMode.Impulse);
         
     }
 
     private void Aim()
     {
         // calculate direction.
-        var direction = player.transform.position - transform.position;
+        var direction = (player.transform.position + new Vector3(0, 100, 0)) - transform.position;
 
         // ignore height difference.
         direction.y = 0;

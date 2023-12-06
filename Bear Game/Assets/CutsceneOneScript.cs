@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CutsceneOneScript : MonoBehaviour
 {
@@ -25,9 +26,10 @@ public class CutsceneOneScript : MonoBehaviour
             bearAnimator.gameObject.transform.position += new Vector3(0, 0, (Time.deltaTime*4));
 
 
-            if (bearAnimator.gameObject.transform.localPosition.z >= 20)
+            if (bearAnimator.gameObject.transform.localPosition.z >= 145)
             {
                 fadeScreen.Play("ScreenFade");
+                Invoke("NextScene", 5);
             }
         }
     }
@@ -38,5 +40,10 @@ public class CutsceneOneScript : MonoBehaviour
         particles.Play();
         bearAnimator.Play("walk");
         bearWalk = true;
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(2);
     }
 }

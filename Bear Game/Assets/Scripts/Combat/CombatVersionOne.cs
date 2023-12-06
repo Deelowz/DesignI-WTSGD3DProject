@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -194,6 +193,14 @@ public class CombatVersionOne : MonoBehaviour
         }
 
         return 0f;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Rock")
+        {
+            TakeDamage(5);
+        }
     }
 
     public void HitVFX(Vector3 hitPosition)
