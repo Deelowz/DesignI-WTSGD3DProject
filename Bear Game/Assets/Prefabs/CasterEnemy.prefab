@@ -630,7 +630,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 8755904846c5fcb4eae309ab279a3a16, type: 3}
   idleTrigger: idleTrigger
   attackPoint: {fileID: 7064713156625952419}
-  objectToThrow: {fileID: 8067001606562842567, guid: 9c151939a8b3a524e853675e081fb804, type: 3}
+  objectToThrow: {fileID: 8067001606562842567, guid: dddffabaafc1bfc41b6098530ab3848a, type: 3}
   throwTimer: 4
 --- !u!54 &2168592160131383407
 Rigidbody:

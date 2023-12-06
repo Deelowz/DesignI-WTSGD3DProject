@@ -197,7 +197,7 @@ public class CombatVersionOne : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "Rock")
+        if(collision.transform.tag == "CasterRock")
         {
             TakeDamage(5);
         }

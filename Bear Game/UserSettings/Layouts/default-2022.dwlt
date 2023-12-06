@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 242
+  controlID: 131
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -177,7 +177,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 186
+  controlID: 70
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 187
+  controlID: 71
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\caleb\OneDrive\Documents\GitHub\DesignI-WTSGD3DProject\Bear
     Game
@@ -337,9 +337,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 98770000
-    m_LastClickedID: 30616
-    m_ExpandedIDs: ffffffff00000000a4750000a6750000a8750000aa7500009a770000c077000050c6000000ca9a3bffffff7f
+    m_SelectedIDs: dc870000
+    m_LastClickedID: 34780
+    m_ExpandedIDs: 00000000d8870000da870000dc870000de8700002a88000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000a4750000a6750000a8750000aa750000
+    m_ExpandedIDs: 00000000d8870000da870000dc870000de870000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -411,7 +411,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6a45fdffe645fdffb648fdff3864fdff6c71fdff8271fdff8e71fdffaa71fdffd671fdffe0a9fdffeaa9fdff08b6fdff7cd7fdffba0afeffc842feffd0c1feff38cdfeff44cdfeffdce1feff7e05ffff9209ffff7c99ffff4c9affff249bffffd49bffffd89bffffdc9bffffe09bffff409cffff449cffff489cffff749cffff829cffff9e9cffff4e9dffff289efffff49effff409fffff5c9fffff96a0ffffb2a0ffff70a1ffff9ebbffff8cc6ffff40d2ffff9cd2ffff78f7ffff42fbffff60b70000c4c5000032720100fc77010094790100b67c0100da7c0100ea430300f8430300444803007c4b0300e67a04005e850400
+      m_ExpandedIDs: 8eacffffdaacffffa2afffff1acbffff44d8ffff52d8ffff56d8ffff68d8ffff96d8ffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -902,9 +902,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 50.99693, y: 24.811949, z: 110.84713}
+    m_Target: {x: 52.933495, y: 21.80411, z: 120.10637}
     speed: 2
-    m_Value: {x: 50.99693, y: 24.811949, z: 110.84713}
+    m_Value: {x: 52.933495, y: 21.80411, z: 120.10637}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -950,9 +950,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.33966208, y: -0.4331207, z: 0.1805095, w: -0.81517845}
+    m_Target: {x: -0.15999964, y: -0.4142801, z: 0.07425579, w: -0.8929297}
     speed: 2
-    m_Value: {x: -0.33992168, y: -0.43188372, z: 0.17999409, w: -0.8158014}
+    m_Value: {x: -0.15999444, y: -0.41426662, z: 0.07425337, w: -0.8929006}
   m_Size:
     m_Target: 1.6370723
     speed: 2

@@ -15,6 +15,7 @@ TagManager:
   - BlueMarlin
   - EelSword
   - OtherSword
+  - CasterRock
   layers:
   - Default
   - TransparentFX
