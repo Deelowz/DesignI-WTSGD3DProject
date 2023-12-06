@@ -5,6 +5,15 @@ public class MenuManager: MonoBehaviour
 {
     public GameObject backButtonUI;
 
+    private void Start()
+    {
+        VolumeManager volumeManager = VolumeManager.instance;
+        if (volumeManager != null)
+        {
+            float volume = volumeManager.GetCurrentVolume();
+            // Use the volume value as needed in the main menu
+        }
+    }
     public void MainMenu()
     {
         // Load LevelOne scene
